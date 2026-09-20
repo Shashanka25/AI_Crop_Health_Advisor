@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2F6B3A">
+<meta name="description" content="Photograph a sick leaf, get a treatment plan in Telugu, Hindi or English, read aloud.">
+<title>Patta — AI crop-health advisor</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.6"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 17 4.5-5 3 3 3-3.5L20 17"/><circle cx="8.5" cy="9.5" r="1.4"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 12a6.5 6.5 0 0 0 13 0M12 18.5V21"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 6.8a7.5 7.5 0 0 1 0 10.4"/></symbol>
+  <symbol id="i-stack" viewBox="0 0 24 24"><path d="m12 3 8.5 4.5L12 12 3.5 7.5 12 3Z"/><path d="m3.5 12 8.5 4.5L20.5 12M3.5 16.5 12 21l8.5-4.5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4c0 9-5.5 14-12 14-1.6 0-3-.3-4-.8C4.5 9.3 10 4 20 4Z"/><path d="M4 20c2.5-5.5 6-9 11-11"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.9"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="6" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="18" r="2.6"/><path d="m8.4 10.7 7.2-3.5M8.4 13.3l7.2 3.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3.5h3l1.6 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.6v3a2 2 0 0 1-2.2 2C10.9 19.4 4.6 13.1 4 5.7A2 2 0 0 1 6 3.5Z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 6.5h15M9.5 6.5V4h5v2.5M6.5 6.5 7.6 20h8.8l1.1-13.5"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 4.5 7.5 12 15 19.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4 2.8 20h18.4L12 4Z"/><path d="M12 10v4.4M12 17.2v.6"/></symbol>
+</svg>
+
+<header class="topbar">
+  <a class="wordmark" href="#" data-go="scan">
+    <span class="wordmark__mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32"><path d="M27 5c0 12.7-7.4 19.5-16.4 19.5-2.2 0-4.2-.4-5.6-1.1C5.6 11.9 13 5 27 5Z" class="m-blade"/><path d="M5 28c3.6-8 8.6-13 15.6-15.8" class="m-vein"/></svg>
+    </span>
+    <span class="wordmark__text">
+      <b>Patta</b>
+      <small data-t="tagline">AI crop-health advisor</small>
+    </span>
+  </a>
+
+  <div class="topbar__right">
+    <div class="langpicker" role="group" aria-label="Language">
+      <button type="button" class="lang" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang" data-lang="te" aria-pressed="false" lang="te">తె</button>
+      <button type="button" class="lang" data-lang="hi" aria-pressed="false" lang="hi">हि</button>
+    </div>
+    <button type="button" class="iconbtn" id="themeBtn" aria-label="Switch theme">
+      <svg class="ic ic--sun"><use href="#i-sun"/></svg>
+      <svg class="ic ic--moon"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ─────────── SCAN ─────────── -->
+  <section class="view view--scan is-active" id="view-scan" aria-labelledby="scanTitle">
+    <h1 class="sr-only" id="scanTitle" data-t="scanTitle">Scan a leaf</h1>
+
+    <div class="scan">
+      <div class="scan__left">
+        <div class="viewfinder" id="viewfinder">
+          <div class="viewfinder__frame">
+            <svg class="viewfinder__guide" viewBox="0 0 200 200" aria-hidden="true">
+              <path d="M158 34c0 66-40 102-86 102-11 0-21-2-27-6C48 64 86 34 158 34Z"/>
+              <path d="M45 160c19-42 45-68 82-83"/>
+            </svg>
+            <img id="preview" alt="" hidden>
+            <video id="videoFeed" autoplay playsinline hidden style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;"></video>
+            <span class="bracket bracket--tl"></span><span class="bracket bracket--tr"></span>
+            <span class="bracket bracket--bl"></span><span class="bracket bracket--br"></span>
+            <p class="viewfinder__hint" data-t="frameHint">Fill the frame with one leaf. Good light, no shadow.</p>
+            <button type="button" class="viewfinder__clear" id="clearPhoto" hidden data-t-aria="removePhoto" aria-label="Remove photo">✕</button>
+          </div>
+        </div>
+
+        <p class="photoflag" id="photoFlag" hidden></p>
+
+        <div class="capture">
+          <button type="button" class="btn btn--big" id="camBtn">
+            <svg class="ic"><use href="#i-camera"/></svg>
+            <span data-t="takePhoto" id="takePhotoLabel">Take photo</span>
+          </button>
+          <input type="file" accept="image/*" capture="environment" id="camInput" hidden>
+          <label class="btn btn--big btn--quiet">
+            <svg class="ic"><use href="#i-image"/></svg>
+            <span data-t="gallery">Gallery</span>
+            <input type="file" accept="image/*" id="fileInput" hidden>
+          </label>
+        </div>
+      </div>
+
+      <div class="scan__right">
+        <fieldset class="field">
+          <legend data-t="cropLabel">Which crop? (optional)</legend>
+          <div class="chips" id="cropChips"></div>
+        </fieldset>
+
+        <div class="field">
+          <label for="note" data-t="noteLabel">Anything you noticed? (optional)</label>
+          <div class="noterow">
+            <textarea id="note" rows="2" data-t-ph="notePh" placeholder="Started 3 days ago, lower leaves first…"></textarea>
+            <button type="button" class="iconbtn iconbtn--mic" id="micBtn" data-t-aria="speak" aria-label="Speak instead of typing">
+              <svg class="ic"><use href="#i-mic"/></svg>
+            </button>
+          </div>
+          <p class="hint" id="micHint" hidden></p>
+        </div>
+
+        <div class="samples">
+          <span data-t="noLeaf">No leaf nearby?</span>
+          <button type="button" class="linkbtn" data-sample="tomato_early_blight" data-t="sample1">Try a tomato sample</button>
+          <button type="button" class="linkbtn" data-sample="rice_blast" data-t="sample2">Try a rice sample</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stickybar">
+      <button type="button" class="btn btn--go" id="diagnoseBtn" disabled>
+        <svg class="ic"><use href="#i-leaf"/></svg>
+        <span data-t="diagnose">Diagnose</span>
+      </button>
+      <p class="stickybar__note" id="goNote" data-t="needPhoto">Add a photo to start</p>
+    </div>
+  </section>
+
+  <!-- ─────────── ANALYZING ─────────── -->
+  <section class="view view--busy" id="view-busy" aria-live="polite">
+    <div class="busy">
+      <div class="busy__frame">
+        <img id="busyImg" alt="">
+        <span class="scanline"></span>
+      </div>
+      <p class="busy__step" id="busyStep" data-t="busy1">Looking at the leaf…</p>
+      <button type="button" class="btn btn--quiet" id="cancelBtn" data-t="cancel">Cancel</button>
+    </div>
+  </section>
+
+  <!-- ─────────── RESULT ─────────── -->
+  <section class="view view--result" id="view-result" aria-labelledby="resTitle">
+    <div class="result" id="result"></div>
+  </section>
+
+  <!-- ─────────── HISTORY ─────────── -->
+  <section class="view view--history" id="view-history">
+    <h2 data-t="historyTitle">My scans</h2>
+    <p class="muted" data-t="historyNote">Saved on this phone only. Nothing is uploaded.</p>
+    <div id="historyList" class="histlist"></div>
+  </section>
+
+  <!-- ─────────── ABOUT ─────────── -->
+  <section class="view view--about" id="view-about">
+    <h2 data-t="aboutTitle">About Patta</h2>
+    <div class="prose" id="aboutBody"></div>
+  </section>
+
+</main>
+
+<nav class="tabbar" aria-label="Sections">
+  <button type="button" class="tab is-active" data-go="scan">
+    <svg class="ic"><use href="#i-camera"/></svg><span data-t="tabScan">Scan</span>
+  </button>
+  <button type="button" class="tab" data-go="history">
+    <svg class="ic"><use href="#i-stack"/></svg><span data-t="tabHistory">My scans</span>
+  </button>
+  <button type="button" class="tab" data-go="about">
+    <svg class="ic"><use href="#i-info"/></svg><span data-t="tabAbout">About</span>
+  </button>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>

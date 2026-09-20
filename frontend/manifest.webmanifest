@@ -1,0 +1,19 @@
+{
+  "name": "Patta — AI crop-health advisor",
+  "short_name": "Patta",
+  "description": "Photograph a sick leaf, get a treatment plan in Telugu, Hindi or English, read aloud.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FCFBF6",
+  "theme_color": "#2F6B3A",
+  "lang": "en-IN",
+  "categories": ["agriculture", "utilities", "education"],
+  "icons": [
+    { "src": "./icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2F6B3A">
+<meta name="description" content="Photograph a sick leaf, get a treatment plan in Telugu, Hindi or English, read aloud.">
+<title>Patta — AI crop-health advisor</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzJGNkIzQSIvPgogIDxwYXRoIGQ9Ik00MjAgOTJjMCAxOTYtMTE2IDMwMC0yNTYgMzAwLTM0IDAtNjYtNi04OC0xN0M5MCAxOTAgMjA1IDkyIDQyMCA5MloiIGZpbGw9IiNGQ0ZCRjYiLz4KICA8cGF0aCBkPSJNODQgNDQwYzU2LTEyNCAxMzQtMjAyIDI0Mi0yNDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJGNkIzQSIgc3Ryb2tlLXdpZHRoPSIzMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMTgwIiByPSIzMCIgZmlsbD0iI0UzOUEwQiIvPgo8L3N2Zz4K" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAmVklEQVR4nO2deZyU1ZX+n3Pvfau6uqo3aFpQE0WiRCDdGsalVWwUnbhNzCSpcQlxGWdUhBEBUeMvpunRiRMVQQggGjUmTtS0McYt0Whii6adKKMgEgUJ7miz9Vbb+773nt8fbxUCsvRKV3ff7+fjH9DVVS/W89x77rnnnkvYd1BNbY2sWF3B9fX1evsfVF5ePc4pdEZ4ae8MqcSBWhtDoIkkqIINMwDah89p6TmYBBEbbmLwC1IKoX3zkVPgPO0lvQ0r72xctf2L4/G4bBrTRA11DRoA74sH7H1h1ULUoEY01DX4ub8af9WEEb7RkwSJKu3r0wEaKR1ZCABEwb+cPQPmffL/wNLLEBHIESAAua9UezoJ8Hqp5O8NmxVKyOeXz1+2Ifc7NbU1qgENBnUwvfpsvfbOtRDx1XHKjfZjrhgTc0TptwCOA1QjQ6oEBLBvwJrBxhgAYAqcTyDRq89n2Zcwgw0AEAffKQkhSBJICYAB7fotADcAVO+Z5sdWL17dDgSzQv2Yeu4tI/SGwCgej4uc8MdOP/HwEOvLjcGZKqxGGWPAnoFho8FgAgkQqJeexZK/MDhrDAIJEpIcASEE/Iy/Tgg85ZK88607XvwbkDVCfb1BD4dGPSq67ENqAKi8snocMc0monOEI8PGMzC+9kEgO7pbdkFgBgYLJZVwBIynM8z8MBPfunJBsF7YXmM9QU+JkFBbS6irM2PiY2LOfmW3kMAlQsmQzvhgZj870ose+jzLQIZhGGyISMmwgvG1ywb3eJ9tvWZ1/ep21NYK1NUxemA26L4BgocxAFA1tfpSodS1JOmQbcInkj3yOZbBCDOzzhmBNf/d+P5PVixqvAvADtrrKt0S5vhLxzvL71ruVU6ujFJZ7CGp5FlGM4yvNZENcyw9BjOzEUpKIQna10/y1vZzVz6wMpHTYFffuMshSU1tjVp+13KvaurxE8WQ4uVSybN819fsG2NHfUsPQ0Qk2TfGd30tlTxLDCleXjX1+InL71ru1dTWqK6+cVcMQPF4XDbUNfiV06qvI4knSdBoP+P7BJI2zrf0GgRBIOlnfJ8EjSaJJyunVV/XUNfgx+PxLg26nf0FqqmtkQ11DX7VFdVzVTQ00096YGaTDXksln1CTnOq0IGfcG9fsbhxVk1tjersLnJnRLuj+AtDM72k54HBVvyWfQ0RCTDYS3qeKgzNrLqiem5DXYNfU1vTqZmgoy/8ovhTnkeA07XHt1h6DgY8J+I4frLzM0FHDECIxwXq6/XnI7/rE1GXFx4WS0/DzL5TGFI5EyAel+jAzvFeQ5fxl45XqK/XVVOPu23byG/Fb8kziEh5qWw4NPW421Bfr8dfOn6vOt2jAXKpzq9Nqb5WRUOz/JTn2rDHkq8Q4Pgpz1XR0KyvTam+tiMp0t2HQMEUoo+8ovpEVvJpNiYMA5ktXLNY8hMGQ0CTEBny9RmvL258MaflXb1812JmECbWyNGjvEhBBCuEI0dq17epTku/gJmNDClhPL0+nULVO+ucFF5o0KAvrgd2Leg5IDQ0+OEwPyTDaqR2fd+K39JfICKhXd+XYTUyHOaH0NDgY86uB/sviDoej0vUwVROOfYSFVFn+GnPZnws/Q4iUn7a81VEnVE55dhLUAeT3S3e8XVf+HMt6NjWY8NJV6wTUgxn37Atb7D0SxiGlCCjzaeFITPqleJXMqjDDmXUOwo7Hheog0m5NFeF1Qjja2PFb+m3EITxtVFhNSLl0lzUwSAeFzu+JEdtIPRxm6sPk6C3sh6x4rcMBAwI0OCxq4Y2rgGA3BnjbQKPr44T6mCExnUqpAQz9+ppfItlX8HMRoWUEBrXoQ4mvjq+beAXAFBbWyvq6+v1kVNOPFw44hyd8XM1/RZLv4eIpM74RjjinCOnnHh4fX29rq2tFUDWAC/gBQEAPnlTREgVmGD0txteloECGWYjQqrAJ28K8Lnmg3YkDFRdVVPCvve6kHQQa2bY+N8ysDAkiYzm90k5R66Y39ACAkRNbY0EgeF6Z6mIOtj4RsOK3zLwEMY3WkXUwXC9s0DgmtoaKSpWVzAAMJnvQDPbWh/LgIVA0MxM5jsAULG6ggkAVc6qHoY03hVCFNlmtJYBDJMgMsa0oQBfWTm3caMAwOTSqSrsFBltNKz4LQMXMtpoFXaKyKVTAXDQu8fQ0UTEILK5f8vAhsgQEcPQ0QBIIWg6dJLxNRFD2vHf0tMICkRFJEAEGGZkm4Hvc4ghja+JmU8CwBQ0sRUvEaM424/fWsDSZYgIIls5z2CAGSk3AwBwfRe+9uDIEIoKY311/wMTEZjQymROUEKLEUKJEu3ZwjdL16CgvzkEEdJuBolMEgSCFBJSShw6YiSYGUeP/jr2H3ogPtn8MX697DE4yukLExAbNtKRJcbHCGWYzxAEZmK2GVBLR8mJnkDwtIdUMg3XdzFq+ME4fuwxYMM4qfJ4lMbKUHnQVyGEgFQRuG4SlyyYDsMmuDGmD56diRkENsxnKBCPtLl/S0cRJCAEwfUD0WvWKC8aiuMPPxonV07ASZUnoLx0+A6/o/3UtpH+yruuw59WLMOIIfvB1/6uPmLfQCAQj1RgSvTdU1j6C4IEiAjJTBIpN42KkmE4dvRROLlqAiaMPRYHlH8peCF7yGTaQPT5pT/MjFAogtsemYfn31iG4UMq+lb8OZgSiginGN/k7uSyWHYgt6hNZpLIeC6qDhmLE8ZU419OOBtfqvgyApH78NxE0JCBBJT8/AStr32Ew0V48IWHMe/xpRheWgGte+yCly5BIGF8AyKcorJXkQZ/b7FkkSLYIvJ8D21uO8Z8aTQuPOU8fPOYb8BREQA+fC8Jw5wNi744fmqjEQ5H8ca7/4fbHl2EYcVDYfLjmAmxYZCgCmVLHyzbI4WEMQatyTYYZpREi3Hd2VfhgpPPQ8gJQ/spuG57NiQSkLtRDrOBFAqpdApzHrwFrck2FBcWISg2yA/YMCtY8VsQxPgMRnOiBZFwBJOOqMFJX5uA48ccjQOHfRnaT8N124PUptjzWakgnpCAkJi2ZAZWvf82SqLFfR767ALb7sQCKCnRnk5CCoF/OvobuPjU76HqkKrsT4P4XgixV+Hn0EYjHIrhnmfuw/Mrl6G8eAj8/BM/AMAaYBAThDsam9u2ovLgMZhz/rU48itfB4AdFrW7iu93R078r779Cv7r4fkYUlSWt+IHrAEGJUQEIQRaEq0IqxCmnnkJpn/zMjhOBK7bDgJ1SvQ5DBsoFcbHGz/E1ffVIVoQ6Zudrk5gDTDIkELC8z20JFpxUuUJuPyMi3DUYUdD+yl4bqLDYc6uIQiSuOU3d+CDjR9hSKwsrxa9u8IaYJAghACB0JpsRWmsBNd+90p87+TzACDI6gjZpVE/h681wuEYftf4Ozz+12cwNM9DnxzWAAOcXM1OMp1ExncxqaoG/++cmRg5/BB4XgJgdHPUD0KfcDiKTc0bcHP9AsQKotB9VO7cWawBBjBCCBhj0J5KYPyoKlzyj5Nx6pETASJkMm3Bjm03k+CGDQQpfLblU/zbwuloSbQiEi7os3r/zmINMEBRUiGZSQIAbrmoFt867p9AJOF7STB4h3KFrhKsbwlShXH9L27Em++tzuuU566wBhhg5Gp3mlo24YhDxuHHF9yAcQePy5YtGEjRc5f8aGMQDkVw6yPzsOytxn4nfsAaYEAhhYSvfbRl2nHhpHNx1dmXY2jxMLiZNkipIHuw26XOFrnd++zPccfjd2G/0mH9TvyANcCAwZEKLck2FBfG8LNL52Ni1UTAuEH5Qg+EO9tjjEYoHMNra17Fwid+hvLiIflS5NZprAH6OUQEIsKGrZ9hUtWJqJv8Axy830h4bgJE1O0Mz84wM0ASiXQCNzxwM5LpJKKRaL9Z9O6MNUA/RBKDGSAhkHEz0EZj1tmX47IzLkJhpHhb0VpvwMxwQoW46q4ZWPvxOpTGSvpl6JPDGqAfIYnhM6HFVxBE0J6Lg4aNxLx/vwlVBx0GAPC0BwkG2KCnzzhpoxEKxfDL5x/As6+/gOJocb8WP2AN0C8QAAyArZ6DMsfDKUO2YHQ0hdHhrThwPw+HvH01PltThMIDJyE8vBqi7HAwG7CfDMqSe4Cc+N/5YDV+XH8HCsORvmpr0qNQ1dTj+v+/YgAjiZHSEmFhMHn4pzi+tBmHFyaD+31AyHgu0p6GFABrQBbth/ABpyJ2xFUIDxsP47YD3QyHtDEIOQVYt2E9Lp4/DVvbm+FIp98ufLfHGiCPUcRo8RUOK0xizsj1OCyaQMYIpHQgaAJnu61l8/pEgHZh3BREuAjFx9yIosrpMG4bILo22RtjIFUYW9u24J//6wI0NW9EtKCw35Q67A0bAuUpMiv+rxQmcfuhazEs5GKr50AQQ9L2Y5b5vOSYAZCEiJQCOoPmF68C2KCoagaMl+j0moCZQSIw2E0P34aPN29AWaw0Pzo69BC2E0QeQgBSWuKwwiTmH7oWQxwPbb6CIu7AF8aA8QChIAqK0LxsJtpW3A5yosHCuBMwACXDuO7eWvy28elsxmfgiB+wBshLGEBYGMwZuR7DQi6SWu406nfkTQzAnDXBLGQ+fBakIsFCoQP4WsNxCvFY4xN4aNljKC8eko9neruNNUCeIYnRqhUmD/8UowuTaPVV58W/jaDhh1AOWl6eCfZT2bXAnt9PZ2v73/7gLfzg/pswpKh0QIofsAbIOwwkikQax5e0IM0E0WXxZ2ENqAJ4W9cis+ElkAjtMRTSRiMUjmBTcxOuua8ORMFu80DNlFgD5BGOJGxKefjHEYTDowmktOyhL0gAxkXib3eDSOx2AjDGIBSKYFPLFlw8fypWf7gGkVCk35Y5dARrgDzBkQqbWrbg1CNrcO2kiWhLZ7p1RHFHDCAd6Ja10JlmQDrY2QXMBiQUNjZvwsXzpuJvH61FabQk78/0dhdrgDzAUQ42tW1BzbjjsPjS/4Tc8nr2ws4egg1IhuFveRu6/X2QCAPb7eIyM4iChldTFs/C6g/fQWl04GV8doU1QB+Su0Riw5bPUDOuGkumzUfYCSNjCKLH+/UxIEO7XAQzM6QKY+6jC/H6ulUoG4Dpzt1hDdBHBLu3jEQ6gQsnnYM7p85FgeNAM0Nwb4iPgv2BnS4C1UbDCUXx4psvYtFT96IkWtTvC9w6g90J7gNypQstyTbUnjcbF576fWg/Ba1dCBmGjB6Anm3ZSgD7EAXloFARwD4Ayi56o/iw6T3MuPsGFEeLBkSBW2ewM8A+hig4kduSaMWc8wPxZzJtQRyOQPbhAyaCNfdcOTMJsJ+GGjIGqmgkWGeyDWwFkqkEfvjAj9GWaocSyhrA0nvkxN+caEXt+dfgglO+j4zbDiVVMCuQgDE+nP2OhSoaDugMemQmIACQKPjSN0DZmxu10XCcCO76w714/o1lede6fF9hDbCPEBR0ZmtOtGLO+dfgwlMmB+LfvlSZBOCnECo7HKEDJ8G4qS5XcW73poD2IcLFiBw2Gcb48JkRDhfh/ud+icVP35c90D44Fr07Yw2wD5BCwNMetrRvxZzzr8EFp0yGu7P4c5AAGw9FVTMgwrFgFuhGKGRIwE8lEaucDhkph/bSCIeL8Ivnfom6X92KaEEUZhCO/DmsAXoZIQSSmRSKC2O47ZKbsuLfQxNaEmCdQWjYeBQf81/BLBD8oNOfrSEQMUkMOex0RI+YBe1nEApH8YvnHsCcX92KkmgxgLxv4Nyr2CxQLyJIwPM9VJQOw73TF2DU/ocik2mHkns5oUUSxm1HUeWVAGs0L5sJUVAEQHSompMBaCaUhzSe2RBG7OtX4htODICPlevfxH8+dNvn4h9ki96dsQboJQQRQEB7KoF7r7wDo/Y/FOl0KxzldPANJIzbhqKqGQCA5mUzQUoFJc25K6Z3KGojGAQbvIoYZY6HxpZS1H5wEIofno9jRo+HEArTllyLSKgABMAMcvED1gC9ghACvu+hLdWOuu9dh6O+ehQymfaOi3/bGykYL4FY1Qw4Q8ai+eWZ8JvfBmsNkgokwwCCUZzZQ1QCJCVafYklHx2ABz4dDuUofLLxA/zs2f9BIp3A+00fobxkYNb2dwV7JriHEUIglUkjFolixtlTcP5J58DzEhDdyemzBjkxsNeOzIaXkVx9N/zWtfC2roEBUKAURKQcf2tmPN+k8NzWYdjkKYSJoYjBIBg28LSHsBMe9GHP9lgD9CCCCJ72MaSoDPdOvwOj9j+s55pUsQaEAskgfPEzW+G1vI/C4qH44ON3cfNvf4Y/r/8Y2hgUCANHGDDvWMdPRFb8O2FDoB4id2gk5aax8LKbMWr/w5DOtMHpqb6cJAE2MF57tjdnMZyKI/Db/30Gt/5mITY2f4ZYyIFQBMOA4S9mjaz4v4g1QA+wrbYnu8lVeUgVXLe958SfxTCDIBAKx7Bh80f48cNz8dSrf0Q0EkVxOAzNDG013imsAbrJ9uUNc86fjQtOmQzP6+5lczvCzDBsEAoVAgAeffkx3PqbhWhq2YSyoqAzs7aje5ewBugGX6zt2UV5QzcxRkNKBSULsfbjtVj4xFI8+ddnES0oRFm0BP4g3sXtCawBukgu7MnV9vSG+LX2EQoXIeOmcM/vl2LJU/ci47soi5XCsLHi7wGsAbpAsA3FaE20bQt7dlvb0wWMMSAihMJFeGPdCtxcfzv+953lKI2WosgJD8qqzd7CGqALCCHRnk6g9vzZn5c095D4g1E/Bt/PYOHjd+Jnz9yPlJtGefFQ+Nq34u9hrAE6iaMcfLq1Cf9ywjdx4Snf71htTwcwbLIZniK8uf5N3PjQrXht7esoihShKFI0aMuVextrgE6gpMKm1i2YVDUBdd+7Hp6Xguxm65LPMzxRsPGw6ImluPP398H1PZTFyoIMjx31ew1rgA6ipMTmti2oGVuNO6fejrATgtbe563Ju4AxGkIohJxCvPXeKtQ9eAteXfM6SmLFiCrHCn8fYA3QAaSUaEm0oWZs0Lok5Cj4vtutxlXbZ3iWPrkUS56+D67vYmjxEPjaHxCXT/QHrAH2gpIKrck2jDloNJZMm4cCR8H3vW6In6EN7yLDU4JYQdTG+vsYa4A9IIiQclMoDEdQd/41iIQjcN1kl3d5mRkMIBSK4qdPLMXdf/j5ThkeO+rva+yRyN1ARDDMiIQiuPvK+Thi1Ne7JX7DBkIIOE4hbn1kHm555A4QCZvh6WOsAXaDFBIbWzfjR+fOwlGHHYV0prXr4jcGSjrI+Ab//etbseipezCstBxEZBe6fYwNgXaBFBIbWzZjxtmX4axjzsxWdnbyNFcWk+2/s6l1Ey65YzrefG81hhbZE1n5gp0BdkIKgU2tWzDtrEtw9XdmQGu3yyO/r304oQg2tW7GxfOm4a3338aQojI76ucR1gDbIaVEa6od0876V8z+7gy4bgJdvRtFG41wuAgbmzd/3m9/EHVd7i9YA2RRUmFz6xZ848iTMPu7M+G5CQiiLm10ae0jFIrhmeXP4js//j7WbliP0mixFX8eYtcACMKeRDqBMV8ajR+dNxu+nwlq/bsgfs/3UFBQjD+8+gdMv/t6SKEQDRcOqpbj/YlBPwOIbCZGG40fnjsLFWUjYLpQ4hDU9DAKCorx9Kt/wFV3/z8UOAUoCHW8fJl6tCW6pSMM6hmAiOAbjYznYsFl/43jxhwXdHHoZHUns4EgCZDEfX+8H3MfXYyQE4IUosMXzDEzNOugRfmgbla4bxnUBgAAYxh3/PtNOO0fvtGlFiaGDYgkSDq45p4b8KuGR1FRWp79WceEbNggEipAYTiCTa1boOTg69PfVwzaEMhRChtbNmPqmRfjtKNORzrd1nnxGwMpHCjpYPY9N+DXL/0O+w/dL9upreMCJgS7zr7WINjePfuSQWmAIOOzFd+uPgOXnHYxXDcBpTo3GRqj4YTCyPgeZt9zAx556XEMKymH53cs07N9kyoiguu5aE60dPt8gaVzDLoQSAiBtJvGAUNH4Lr4DISkgMedaz7ua41wOIZ1n7yLyxfNxPtNH24rY+4IhEDwwQI5WCMQESRJG/3vYwbVcCOI4GsfUkj8fMZC7F9+ADwv06m+nb72EQ7H8PcN7+KieVPxftNHnbpeiEBwfRdf2f8QVB48Fq7fvUM1lu4xaAyQE1lbqh2zv/MfGLX/YchkEp2q6w9G/iKs++RdXHj7FdjYuhnFhR2/VlSQCFKloQKUxUrwxvpVcOyCt08ZFAbYvodP3fnXYvLJ5wVtTDqR7tTGIByO4ZGXHsMFt1+OTa1bshtcHQt7BAm0pxMAGMYY/HXN69van1j6jkFjgNbkjj18OprxYWZorREKBVcLXX3PD9GabEdhONLxsIcIrak2TPza8ShwwtBsEHZCVvx5wIA3gBISW9q24vr49KCHT6Zz4g8aVMVw/x9/iTm/ugVDYmVwpNOh01tEBCEEWhKtuGjSuRh30FfRmmqDFMKGPXnCgM4CSSHRlk5gUtWJuOjU73eqjYkxBkI68LSPpU8uxe2PLUFJtBiMjuX4iQhaayQyKXzzmNNQECrA/N/dheLCmBV/HjFgDZC7nXFIUSlu/7ebICjov0MdMIAxBko5SHsepiyaiT+tWIZhJeUwxnSoTEGQQMZ3URgqwMlVE/DRpk/wu1f+gLJYsb2XK88YkCFQ7qhhtKAQCy69GcXRkg53ctBGQ6kQ0p6PKYtmomHVX7Bf2TBoozskfiJC2sugwAkjfsLZ2Ny6Ba///U0MLS614s9DBuQMIEigqWUTbvvXOhw1+ugOty80JljsJlJtmLpkNhpW/QXlRUM6vLubuyJpaFEZjhk9Ho+8/AS2JlqyZwFsOXQ+MuAMIIVEW6odM755Gc6riXc43RlscBXhtTWv4up7foQNW5swpKgMXicOsbi+B2bGsJKh+N93lqM9nUBxJGrbneQxA8oAQggkMkkcesAhmPXtaTDG7dAub+4Qy6trXsWlC65CyssgVhDt8MF1IkLGc1F58BhkvAzefO9viIQjQftEK/68ZsCtAYwxmPWtKQBJ+NrfS66dYYzOiv+vuHTBVfC0j2i4sFMH15kZIeUg7aXxXtOHiEWikGRTnf2BAWMAJ3um99wJ38LJR0yC76X2mO83bGAYcEJR/M+fH8KURbPhZu/R7WrXhjUfr9tWCm0PtfQPBkQIpKTC5rat+OYxp2HO5Ovhusk9ZnyYGUqGQMLBLY/Mw4LHl6K8eAjCqnu3r9hLqPsf/d4AUgi0pxI4YOhw/CA+AwTO/rfr0CdoUajQ1LwRNz58G55Z/mfsV1qRnRG6F69b8fc/+nUIJIjg+h72Kx2G+2cswv7l+++xbXn2+AmkDOP6X9yER19+CiXR4iDHb8U7KOnXBjDMwc3sl9+MQ/Y/FJnMnkMfbQwcpwC3PjIPy95qxAFDh9tePYOcfmsAIQRSbho/OvfqbTez7ynf72sf4VAU9z77C9zx+F0oihR1KsdvGZj0SwPkMj7xE/4pW96855vZc20KX3vnVSx84mcoLx5ib2CxAOiHBpBCoCXZimO/+g+4Lj4Drpfa42aXzpY3rHrvTfzbwunwfA/C5ugtWfqVAYgIvtYoCBXghnOvRixSDPDuT1UF9fwKqXQCNz54GxKZFApCYTv6W7bRrwwgsxdUTzn9Iow7+GtwM+27re8PRniG44Rx5V3X4dW1r6Ok0BalWXak3xhASYVNLZtx+j9MwpSzLsu2MNz9NoZhA+VEcf8ff4k/rViGslipzfhYvkC/MEDusrqxB30VPzo36N68p7jfz7Ynf+BPD2LOg7eipBNtSyyDi/5hACGRSCVx9bevQEXZiD1eUG2MybYuWYNbf7MQRZHYPn5aS38i7w2Qq/M5+9jTMGHcBHheYrf5/uAoYwjvfrwGF83/D/hGQ0llT2JZdkteGyDXxvDA8hG45rvTIfdQ2czMECJoUf6D+/8Tn2z+NMj42Hp8yx7IWwPQ9m0Mr1qIA8oPDOp8dhP7GwaIJK6594d4Y/1bKIuV2JsYLXslbw0gSCCVSWP2d6bttY1hsNlViEde+i0eavhtp9oVWgY3eWkAJRU+a96IqWf+KyaffP4eD7Xndnp//+rvMefB21BeMhRG27DH0jHyzgBSSLQm2zDpiAm49LSL99jMShuDUCiG9z79O66+pxYqWw9kT2NZOkpeGYCI4GkPRZEYbpp8PQoj0d2WOuQOtmxs/hTTl14PRnDri63xsXSGvDNAxnMx799vxJcqDobr7jruZ2ZIkpBCYsriq7Hqg7cRCRfYDgyWTpM3BhBCoC3ZjhPHVuPEr9XA20OJs2EDIUOY++hCvLFulc34WLpMXhgg18qwOFqE2vOuBhtvt3cWedkyhwcb6jHv8aUojdkCN0vXyQsDSCGxpa0Z13x7Gg6sOHi3tT6+9lEQjuG1Na9i7m8Xo7x4iA17LN2iz7tCSCHRnGjBuRO+hfiEf4bnpYId3SzBDewGzIxwuAjvfrwGlyyYHlxXpEK2tt/SLfrUAESElJvGl8sPwI/Ovyb7twaGCZwVdihUgOAxGSvWv4mf/Pp2pN00YpGYjfst3abPDJC7J1dJiUVTfoJouBCum0RIhSGUAyCYBT5s+gAPv/QY/r5hPV5c9Rf4Wneqb6fFsif6zACCBDa3b8FFp5yLww8aBwAokCH4XhLrP1mP195dgbc/fAdPv/YcPmtugiMVYgUxhJRtOGvpOfrEAIIIaTeNsV/+KqacfgnWf7oO/7fuTby29g2889EarN2wHqlMCtpoFEViKC8eElxWZ4zd6LL0KFQ19bh9rihCcJHElysOgOt5aE40Y1PrFiipoIRCQSicLX+gDl9LZLF0hT6ZARgMRyq83/QRwAwlVXaU/zzrY8Mcy76gz9YAjKCnfvYPdjPL0if0aRrUxvOWvkYANsC2DFpYkNjjHUIWy4CFBJFgw00kCLAzgWXwwCQIbLhJMOM5oQQYtqjGMjhgsBFKgBnPCRBH+/qBLJY+gTgqwLTe7jRZBh0MBtN6IYieBoOI7WLYMjggJgKDBNHTwkizQRvTks0G2ZnAMtBhEkTamBYjzQaxckHjKtb8AUkiGwpZBjwMJknEmj9YuaBxlQBARPRnoSQzwdYjWAY0TNBCSSaiPwOgYCdY8F+ZmcCcF2eELZZeg1kwM0HwXwGwAEAc4j/6Ga9NBH1IbBhkGaiwkEL6Ga+NQ/xHACTi8bhYObexCczPCyXYbohZBirZDTAG8/Mr5zY2xeNxIZrGNBEAEIvfwC6ELQMZBkMSEYvfAEDTmCYiAAQGqq6qKWHfe11IOog1M/KkZ5DF0kMYkkRG8/uknCNXzG9oAWXLoWvm1MgVdzQ0M/MTIqSI2YZBloEFM5ustp9YcUdDc82cGonsIhgTMdEAgGJniXH9tCCy5wQsAwkWRMK4flqxswT4XPPbyh/i8bisr6/XlVOqf+5EnAu9tOcTUZ93jrNYugsz+06Bo7yUd//KJY0X5bQObN+CtjaI+cdtrj5Mgt7Kjv92HWAZCBgQoMFjVw1tXAMAqIMBthd4HQxWx2nVTxvfBvNSGVaCme3OsKVfw8xahpUA89JVP218G6vjlBM/8MUm5IRa0LGtx4aTrlgnpBjOvmGQnQks/RCGISXIaPNpYciMeqX4lQzqwNhufbuzsDm+Ok6vzHslBWNuEIrIboxZ+ivBxhcRjLnhlXmvpOKr41+oeN71GYBaCNTBVE6pfkpFnDN8uyC29DOY2VcFjvJT3tMrlzSemdP0zq/btQEYhIk1cvQoL1IQwQrhyJHa9Q3Rbm6ptljyCGY2MqSE8fT6dApV76xzUnihQQdbvjuya0ETGBUV/M69f2kTzBex4QQJsk06LfkPg0mQYcMJwXzRO/f+pQ0VFbwr8QN7SnPW1+ua2hr1+uLGF7Wnb1SFIQWC12sPbrH0BARPFYaU9vSNry9ufLGmtkYhm/Pf9cv3wvhLxzvL71ruVU097jYVcWZ5Kc8jwOnZp7ZYug8DnhNxHD/lzV2x6C9X57S7p9/pyEF4QjwuUF+vq66onqsKQzO9pGsXxZa8gpl9pzCk/KR7+4rFjbMQj0vU1xvspaSnI4taRn29qamtUSsWN87yk+7tTmFIMWw4ZMkPGPC2F3827Nmr+IGOlzpwQ12D3sEEEcdhwLMLY0ufweBtYc924m+oa9DoYDFnZ3sBUU1tjWyoa/Crrqieq6KhmX7SAzPbFKlln5LTnCp04Ce6Jn6g8wYAAIrH46K+vl5XTqu+TgjxQxIiql3frgss+wRm9mVIKTYmYYy5aeVPG/87W+HZobBne7rcDS7rNr9q6vETSdKdQtJo3/U1MZGtHbL0CgzDxKxCShrN77Dmy1csevmFnBa78pbdaoeYSzNVTq6MUlnsIankWUYzjK91NiSy7RYtPQEzsxFKSiEJ2tdP8tb2c1c+sDLRkVTnnui+QGtrBerqDABUTa2+VCh1LUk6RGd8MLNPRLJHPscyGGFm1kSkZFiBNf/d+P5PVixqvAvADtrrKj0lTEJtLaGuzoyJj4k5+5XdQgKXCCVD24wAEjY0snQIhmGwyQnf+Nplg3u8z7Zes7p+dXtW+DuUNXeVHh2Ztz9qVnll9Thimk1E5whHho1nYHztg0AEGx5ZvkDQk4rBQkklHAHj6QwzP8zEt65c0LgK2FFjPUFviHBblggAxk4/8fAQ68uNwZkqrEYZY8CegWGjweDszEC99CyW/IWDPD4bEEiQkOQICCHgZ/x1QuApl+Sdb93x4t+AbcLvdJZnb/Se6Goh4qvjlDPCmCvGxBxR+i2A4wDVyJAqAQHsG7BmsAluxuZs1Z6dJQYU2zoOEgffKQkhSBJICYAB7fotADcAVO+Z5sdWL17dDmSFP6aed1XL3xP0vsBqIWpQI7ZPU42/asII3+hJgkSV9vXpAI2UjiwEAKLA4uwZe4/wAIGIQI4AAch9pdrTSYDXSyV/b9isUEI+v3z+sg2536mprVENaDC9Jfxtz9abb77zZ9XU1siK1RW8cwxXeXn1OKfQGeGlvTOkEgdqbQyBJpKgCjbM+/g5LT0HkyBiw00MfkFKIbRvPnIKnKe9pLdh5Z1BXJ8jHo/LpjFN1Nnd3O7w/wFOVxDmHl44AwAAAABJRU5ErkJggg==">
+<style>
+/* ============================================================
+   Patta — AI crop-health advisor
+   Design notes
+   • Ground is limewash white, not cream: a phone held in open
+     sunlight needs the brightest ground we can give it.
+   • Marigold is the only action colour. Green / amber / chilli
+     are reserved for severity, so colour always means something.
+   • Type comes from the phone. Android already ships Noto Sans
+     Telugu and Devanagari; downloading webfonts over 2G to say
+     the same thing would be a worse app.
+   ============================================================ */
+
+:root{
+  --ground:#FCFBF6;
+  --surface:#FFFFFF;
+  --sunk:#F1EEE2;
+  --ink:#241F17;
+  --ink-2:#5F5749;
+  --line:#E2DCCA;
+
+  --marigold:#E39A0B;
+  --marigold-deep:#B97800;
+  --on-marigold:#221C10;
+
+  --leaf:#2F6B3A;
+  --amber:#B4700A;
+  --chilli:#AF2318;
+
+  --shadow:0 1px 0 rgba(36,31,23,.04), 0 6px 18px -12px rgba(36,31,23,.5);
+  --r-s:8px; --r-m:14px; --r-l:22px;
+
+  --tap:48px;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --pad:max(16px, env(safe-area-inset-left));
+
+  color-scheme:light dark;
+}
+
+@media (prefers-color-scheme:dark){
+  html[data-theme="auto"],
+  :root:not([data-theme="light"]):not([data-theme="dark"]){ --ground:#15130E; --surface:#1F1C15; --sunk:#2A2619;
+    --ink:#F2EDE0; --ink-2:#AAA08B; --line:#3A3425;
+    --marigold:#F0AF2C; --marigold-deep:#D08F10; --on-marigold:#1B1710;
+    --leaf:#69B36F; --amber:#DFA23A; --chilli:#E9766A;
+    --shadow:0 6px 20px -14px #000; }
+}
+html[data-theme="dark"]{ --ground:#15130E; --surface:#1F1C15; --sunk:#2A2619;
+  --ink:#F2EDE0; --ink-2:#AAA08B; --line:#3A3425;
+  --marigold:#F0AF2C; --marigold-deep:#D08F10; --on-marigold:#1B1710;
+  --leaf:#69B36F; --amber:#DFA23A; --chilli:#E9766A;
+  --shadow:0 6px 20px -14px #000; }
+
+/* Indic scripts need more room to breathe than Latin does. */
+html[lang="te"]{ --sans:"Noto Sans Telugu","Noto Serif Telugu","Ramabhadra",system-ui,sans-serif; }
+html[lang="hi"]{ --sans:"Noto Sans Devanagari","Noto Sans","Nirmala UI",system-ui,sans-serif; }
+html[lang="te"] body, html[lang="hi"] body{ line-height:1.7; }
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-padding-top:env(safe-area-inset-top,0px); background:#15130E; }
+
+body{
+  margin:0 auto;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.55;
+  color:var(--ink);
+  background:var(--ground);
+  -webkit-text-size-adjust:100%;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:calc(74px + env(safe-area-inset-bottom,0px));
+  overflow-x:hidden;
+}
+
+.sprite{ position:absolute; width:0; height:0; }
+.ic{ width:22px; height:22px; flex:none; fill:none; stroke:currentColor;
+     stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.muted{ color:var(--ink-2); }
+.hint{ font-size:14.5px; color:var(--ink-2); margin:6px 0 0; }
+
+:focus-visible{ outline:3px solid var(--marigold); outline-offset:2px; border-radius:4px; }
+
+/* ── top bar ──────────────────────────────────────────────── */
+.topbar{
+  position:fixed; top:env(safe-area-inset-top,0px); z-index:20; left:50%; transform:translateX(-50%); width:100%; max-width:480px;
+  display:flex; align-items:center; gap:12px; justify-content:space-between;
+  padding:10px var(--pad); background:var(--ground);
+  border-bottom:1px solid var(--line);
+}
+.wordmark{ display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit; }
+.wordmark__mark{ width:34px; height:34px; display:grid; place-items:center;
+  background:var(--leaf); border-radius:10px 10px 10px 3px; }
+.wordmark__mark svg{ width:24px; height:24px; }
+.m-blade{ fill:#FCFBF6; }
+.m-vein{ fill:none; stroke:var(--leaf); stroke-width:2.2; stroke-linecap:round; }
+.wordmark__text b{ display:block; font-size:19px; letter-spacing:-.01em; line-height:1.1; }
+.wordmark__text small{ display:block; font-size:12.5px; color:var(--ink-2); }
+.topbar__right{ display:flex; align-items:center; gap:8px; }
+
+.langpicker{ display:flex; background:var(--sunk); border-radius:999px; padding:3px; }
+.lang{ min-width:44px; height:38px; border:0; background:none; border-radius:999px;
+  font:inherit; font-size:15px; color:var(--ink-2); cursor:pointer; }
+.lang[aria-pressed="true"]{ background:var(--surface); color:var(--ink); font-weight:600; box-shadow:var(--shadow); }
+
+.iconbtn{ width:var(--tap); height:var(--tap); display:grid; place-items:center;
+  border:1px solid var(--line); background:var(--surface); border-radius:12px;
+  color:var(--ink); cursor:pointer; }
+.iconbtn .ic--moon{ display:none; }
+html[data-theme="dark"] .iconbtn .ic--moon{ display:block; }
+html[data-theme="dark"] .iconbtn .ic--sun{ display:none; }
+
+/* ── views ────────────────────────────────────────────────── */
+.view{ display:none; padding:calc(16px + 55px) var(--pad) 8px; margin:0 auto; }
+.view.is-active{ display:block; }
+.view h2{ font-size:22px; margin:4px 0 6px; }
+
+/* ── scan ─────────────────────────────────────────────────── */
+.scan{ display:grid; gap:20px; }
+
+.viewfinder__frame{
+  position:relative; aspect-ratio:4/3; border-radius:var(--r-l);
+  background:var(--sunk); overflow:hidden; display:grid; place-items:center;
+  border:1px solid var(--line);
+}
+.viewfinder__guide{ width:62%; fill:none; stroke:var(--ink-2); stroke-width:3;
+  stroke-linecap:round; opacity:.32; }
+#preview{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.viewfinder.has-photo .viewfinder__guide,
+.viewfinder.has-photo .viewfinder__hint{ display:none; }
+.viewfinder__hint{ position:absolute; left:14px; right:14px; bottom:12px; margin:0;
+  text-align:center; font-size:14px; color:var(--ink-2); }
+.viewfinder__clear{ position:absolute; top:10px; right:10px; width:40px; height:40px;
+  border:0; border-radius:50%; background:rgba(20,17,12,.66); color:#fff; font-size:17px; cursor:pointer; }
+
+.bracket{ position:absolute; width:26px; height:26px; border:3px solid var(--marigold); }
+.bracket--tl{ top:12px; left:12px; border-right:0; border-bottom:0; border-radius:8px 0 0 0; }
+.bracket--tr{ top:12px; right:12px; border-left:0; border-bottom:0; border-radius:0 8px 0 0; }
+.bracket--bl{ bottom:12px; left:12px; border-right:0; border-top:0; border-radius:0 0 0 8px; }
+.bracket--br{ bottom:12px; right:12px; border-left:0; border-top:0; border-radius:0 0 8px 0; }
+
+.photoflag{ margin:10px 0 0; padding:11px 13px; border-radius:var(--r-m); font-size:15px;
+  background:color-mix(in srgb, var(--amber) 14%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--amber) 40%, transparent); }
+
+.capture{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  min-height:var(--tap); padding:0 18px; border:0; border-radius:var(--r-m);
+  background:var(--marigold); color:var(--on-marigold);
+  font:inherit; font-weight:650; cursor:pointer; text-decoration:none; }
+.btn:active{ transform:translateY(1px); }
+.btn--big{ min-height:56px; font-size:17px; }
+.btn--quiet{ background:var(--surface); color:var(--ink); border:1px solid var(--line); }
+.btn[disabled]{ opacity:.45; cursor:not-allowed; }
+.btn--go{ width:100%; min-height:58px; font-size:18px; }
+.linkbtn{ border:0; background:none; padding:4px 2px; font:inherit; font-size:15px;
+  color:var(--marigold-deep); text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+
+.field{ border:0; padding:0; margin:0 0 18px; }
+.field legend, .field > label{ display:block; font-weight:600; font-size:15.5px; margin-bottom:9px; }
+.chips{ display:flex; flex-wrap:wrap; gap:8px; }
+.chip{ min-height:42px; padding:0 14px; border:1px solid var(--line); border-radius:999px;
+  background:var(--surface); color:var(--ink); font:inherit; font-size:15px; cursor:pointer; }
+.chip[aria-pressed="true"]{ background:var(--leaf); border-color:var(--leaf); color:#fff; font-weight:600; }
+
+.noterow{ display:flex; gap:9px; align-items:stretch; }
+textarea, input[type=text]{ flex:1; min-width:0; font:inherit; font-size:16.5px; color:var(--ink);
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m);
+  padding:11px 13px; resize:vertical; }
+.iconbtn--mic{ height:auto; }
+.iconbtn--mic.is-live{ background:var(--chilli); border-color:var(--chilli); color:#fff; }
+
+.samples{ font-size:15px; color:var(--ink-2); display:flex; flex-wrap:wrap; gap:4px 12px; align-items:center; }
+
+.stickybar{
+  position:sticky; bottom:calc(74px + env(safe-area-inset-bottom,0px));
+  margin:18px calc(var(--pad) * -1) 0; padding:12px var(--pad);
+  background:linear-gradient(to top, var(--ground) 72%, transparent);
+}
+.stickybar__note{ margin:7px 0 0; text-align:center; font-size:14px; color:var(--ink-2); }
+
+/* ── analyzing ────────────────────────────────────────────── */
+.busy{ min-height:62vh; display:grid; place-content:center; justify-items:center; gap:18px; text-align:center; }
+.busy__frame{ position:relative; width:min(78vw,300px); aspect-ratio:1;
+  border-radius:var(--r-l); overflow:hidden; background:var(--sunk); border:1px solid var(--line); }
+.busy__frame img{ width:100%; height:100%; object-fit:cover; }
+.scanline{ position:absolute; left:0; right:0; height:38%; pointer-events:none;
+  background:linear-gradient(to bottom, transparent, color-mix(in srgb, var(--marigold) 42%, transparent), transparent);
+  animation:sweep 1.9s ease-in-out infinite; }
+@keyframes sweep{ 0%{ top:-38%; } 100%{ top:100%; } }
+.busy__step{ margin:0; font-size:17px; color:var(--ink-2); }
+@media (prefers-reduced-motion:reduce){ .scanline{ animation:none; top:30%; } }
+
+/* ── result ───────────────────────────────────────────────── */
+.result{ display:grid; gap:18px; }
+.verdict{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r-l);
+  overflow:hidden; box-shadow:var(--shadow); }
+.verdict__photo{ width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:var(--sunk); }
+.verdict__body{ padding:16px; }
+.verdict__crop{ font-size:14.5px; color:var(--ink-2); margin:0 0 2px; }
+.verdict__name{ font-size:24px; line-height:1.25; margin:0 0 4px; }
+.verdict__alt{ font-size:16px; color:var(--ink-2); margin:0 0 14px; }
+
+.meter{ margin:0 0 14px; }
+.meter__top{ display:flex; justify-content:space-between; font-size:14.5px; margin-bottom:6px; }
+.meter__track{ height:10px; border-radius:999px; background:var(--sunk); overflow:hidden; }
+.meter__fill{ height:100%; border-radius:999px; background:var(--leaf); }
+.sev-moderate .meter__fill{ background:var(--amber); }
+.sev-high .meter__fill{ background:var(--chilli); }
+.meter--conf .meter__fill{ background:var(--ink-2); }
+
+.caution{ display:flex; gap:10px; padding:12px; border-radius:var(--r-m); font-size:15px;
+  background:color-mix(in srgb, var(--chilli) 12%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--chilli) 38%, transparent); }
+.caution .ic{ color:var(--chilli); }
+
+.actions{ display:flex; flex-wrap:wrap; gap:8px; padding:0 16px 16px; }
+.actions .btn{ flex:1 1 138px; }
+
+.block{ background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r-l); padding:18px; }
+.block + .block{ margin-top:16px; }
+.block h3{ margin:0 0 10px; font-size:18px; }
+.block p{ margin:0 0 10px; }
+.block p:last-child{ margin-bottom:0; }
+
+/* The plan really is a sequence, so it gets numbers. */
+.steps{ list-style:none; margin:0; padding:0; counter-reset:step; }
+.steps li{ counter-increment:step; display:grid; grid-template-columns:34px 1fr; gap:13px;
+  padding:14px 0; border-top:1px solid var(--line); }
+.steps li:first-child{ border-top:0; padding-top:4px; }
+.steps li::before{ content:counter(step); grid-row:span 2; width:34px; height:34px;
+  display:grid; place-items:center; border-radius:50%; font-weight:700; font-size:15px;
+  background:var(--sunk); color:var(--ink); }
+.step__head{ display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; }
+.step__title{ font-weight:650; }
+.step__kind{ font-size:13px; padding:2px 9px; border-radius:999px; border:1px solid var(--line); color:var(--ink-2); }
+.kind-field .step__kind{ border-color:var(--leaf); color:var(--leaf); }
+.kind-organic .step__kind{ border-color:var(--leaf); color:var(--leaf); }
+.kind-chemical .step__kind{ border-color:var(--amber); color:var(--amber); }
+.step__detail{ grid-column:2; margin:4px 0 0; }
+.step__when{ grid-column:2; font-size:14px; color:var(--ink-2); margin:5px 0 0; }
+
+.ticks{ margin:0; padding:0; list-style:none; }
+.ticks li{ display:grid; grid-template-columns:22px 1fr; gap:10px; padding:6px 0; }
+.ticks .ic{ width:20px; height:20px; color:var(--leaf); margin-top:3px; }
+.ticks--warn .ic{ color:var(--chilli); }
+
+.helprow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+.helprow .btn{ flex:1 1 180px; }
+
+.feedback{ display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  margin-top:16px; font-size:15px; color:var(--ink-2); }
+
+/* ── history ──────────────────────────────────────────────── */
+.histlist{ display:grid; gap:10px; margin-top:14px; }
+.hist{ display:grid; grid-template-columns:72px 1fr auto; gap:12px; align-items:center;
+  padding:10px; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m);
+  text-align:left; font:inherit; color:inherit; cursor:pointer; width:100%; }
+.hist img{ width:72px; height:72px; object-fit:cover; border-radius:10px; background:var(--sunk); }
+.hist b{ display:block; font-size:16px; }
+.hist small{ color:var(--ink-2); font-size:13.5px; }
+.dot{ width:10px; height:10px; border-radius:50%; background:var(--leaf); display:inline-block; margin-right:6px; }
+.dot.sev-moderate{ background:var(--amber); } .dot.sev-high{ background:var(--chilli); }
+.empty{ padding:36px 18px; text-align:center; color:var(--ink-2);
+  border:1px dashed var(--line); border-radius:var(--r-l); }
+
+/* ── about ────────────────────────────────────────────────── */
+.prose{ max-width:68ch; }
+.prose h3{ margin:22px 0 6px; font-size:17.5px; }
+.prose ul{ padding-left:20px; }
+.prose li{ margin:5px 0; }
+
+/* ── tabbar ───────────────────────────────────────────────── */
+.tabbar{
+  position:fixed; left:50%; transform:translateX(-50%); width:100%; max-width:480px; bottom:0; z-index:30;
+  display:grid; grid-template-columns:repeat(3,1fr);
+  background:var(--surface); border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.tab{ min-height:64px; display:grid; place-items:center; gap:2px; border:0; background:none;
+  font:inherit; font-size:12.5px; color:var(--ink-2); cursor:pointer; }
+.tab.is-active{ color:var(--ink); font-weight:650; }
+.tab.is-active .ic{ color:var(--marigold-deep); }
+
+/* ── toast ────────────────────────────────────────────────── */
+.toast{ position:fixed; left:50%; transform:translateX(-50%);
+  bottom:calc(86px + env(safe-area-inset-bottom,0px)); z-index:40;
+  max-width:min(92vw,460px); padding:12px 16px; border-radius:var(--r-m);
+  background:var(--ink); color:var(--ground); font-size:15px; box-shadow:var(--shadow); }
+
+</style>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.6"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 17 4.5-5 3 3 3-3.5L20 17"/><circle cx="8.5" cy="9.5" r="1.4"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 12a6.5 6.5 0 0 0 13 0M12 18.5V21"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 6.8a7.5 7.5 0 0 1 0 10.4"/></symbol>
+  <symbol id="i-stack" viewBox="0 0 24 24"><path d="m12 3 8.5 4.5L12 12 3.5 7.5 12 3Z"/><path d="m3.5 12 8.5 4.5L20.5 12M3.5 16.5 12 21l8.5-4.5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4c0 9-5.5 14-12 14-1.6 0-3-.3-4-.8C4.5 9.3 10 4 20 4Z"/><path d="M4 20c2.5-5.5 6-9 11-11"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.9"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="6" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="18" r="2.6"/><path d="m8.4 10.7 7.2-3.5M8.4 13.3l7.2 3.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3.5h3l1.6 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.6v3a2 2 0 0 1-2.2 2C10.9 19.4 4.6 13.1 4 5.7A2 2 0 0 1 6 3.5Z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 6.5h15M9.5 6.5V4h5v2.5M6.5 6.5 7.6 20h8.8l1.1-13.5"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 4.5 7.5 12 15 19.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4 2.8 20h18.4L12 4Z"/><path d="M12 10v4.4M12 17.2v.6"/></symbol>
+</svg>
+
+<header class="topbar">
+  <a class="wordmark" href="#" data-go="scan">
+    <span class="wordmark__mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32"><path d="M27 5c0 12.7-7.4 19.5-16.4 19.5-2.2 0-4.2-.4-5.6-1.1C5.6 11.9 13 5 27 5Z" class="m-blade"/><path d="M5 28c3.6-8 8.6-13 15.6-15.8" class="m-vein"/></svg>
+    </span>
+    <span class="wordmark__text">
+      <b>Patta</b>
+      <small data-t="tagline">AI crop-health advisor</small>
+    </span>
+  </a>
+
+  <div class="topbar__right">
+    <div class="langpicker" role="group" aria-label="Language">
+      <button type="button" class="lang" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang" data-lang="te" aria-pressed="false" lang="te">తె</button>
+      <button type="button" class="lang" data-lang="hi" aria-pressed="false" lang="hi">हि</button>
+    </div>
+    <button type="button" class="iconbtn" id="themeBtn" aria-label="Switch theme">
+      <svg class="ic ic--sun"><use href="#i-sun"/></svg>
+      <svg class="ic ic--moon"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ─────────── SCAN ─────────── -->
+  <section class="view view--scan is-active" id="view-scan" aria-labelledby="scanTitle">
+    <h1 class="sr-only" id="scanTitle" data-t="scanTitle">Scan a leaf</h1>
+
+    <div class="scan">
+      <div class="scan__left">
+        <div class="viewfinder" id="viewfinder">
+          <div class="viewfinder__frame">
+            <svg class="viewfinder__guide" viewBox="0 0 200 200" aria-hidden="true">
+              <path d="M158 34c0 66-40 102-86 102-11 0-21-2-27-6C48 64 86 34 158 34Z"/>
+              <path d="M45 160c19-42 45-68 82-83"/>
+            </svg>
+            <img id="preview" alt="" hidden>
+            <video id="videoFeed" autoplay playsinline hidden style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;"></video>
+            <span class="bracket bracket--tl"></span><span class="bracket bracket--tr"></span>
+            <span class="bracket bracket--bl"></span><span class="bracket bracket--br"></span>
+            <p class="viewfinder__hint" data-t="frameHint">Fill the frame with one leaf. Good light, no shadow.</p>
+            <button type="button" class="viewfinder__clear" id="clearPhoto" hidden data-t-aria="removePhoto" aria-label="Remove photo">✕</button>
+          </div>
+        </div>
+
+        <p class="photoflag" id="photoFlag" hidden></p>
+
+        <div class="capture">
+          <button type="button" class="btn btn--big" id="camBtn">
+            <svg class="ic"><use href="#i-camera"/></svg>
+            <span data-t="takePhoto" id="takePhotoLabel">Take photo</span>
+          </button>
+          <input type="file" accept="image/*" capture="environment" id="camInput" hidden>
+          <label class="btn btn--big btn--quiet">
+            <svg class="ic"><use href="#i-image"/></svg>
+            <span data-t="gallery">Gallery</span>
+            <input type="file" accept="image/*" id="fileInput" hidden>
+          </label>
+        </div>
+      </div>
+
+      <div class="scan__right">
+        <fieldset class="field">
+          <legend data-t="cropLabel">Which crop? (optional)</legend>
+          <div class="chips" id="cropChips"></div>
+        </fieldset>
+
+        <div class="field">
+          <label for="note" data-t="noteLabel">Anything you noticed? (optional)</label>
+          <div class="noterow">
+            <textarea id="note" rows="2" data-t-ph="notePh" placeholder="Started 3 days ago, lower leaves first…"></textarea>
+            <button type="button" class="iconbtn iconbtn--mic" id="micBtn" data-t-aria="speak" aria-label="Speak instead of typing">
+              <svg class="ic"><use href="#i-mic"/></svg>
+            </button>
+          </div>
+          <p class="hint" id="micHint" hidden></p>
+        </div>
+
+        <div class="samples">
+          <span data-t="noLeaf">No leaf nearby?</span>
+          <button type="button" class="linkbtn" data-sample="tomato_early_blight" data-t="sample1">Try a tomato sample</button>
+          <button type="button" class="linkbtn" data-sample="rice_blast" data-t="sample2">Try a rice sample</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stickybar">
+      <button type="button" class="btn btn--go" id="diagnoseBtn" disabled>
+        <svg class="ic"><use href="#i-leaf"/></svg>
+        <span data-t="diagnose">Diagnose</span>
+      </button>
+      <p class="stickybar__note" id="goNote" data-t="needPhoto">Add a photo to start</p>
+    </div>
+  </section>
+
+  <!-- ─────────── ANALYZING ─────────── -->
+  <section class="view view--busy" id="view-busy" aria-live="polite">
+    <div class="busy">
+      <div class="busy__frame">
+        <img id="busyImg" alt="">
+        <span class="scanline"></span>
+      </div>
+      <p class="busy__step" id="busyStep" data-t="busy1">Looking at the leaf…</p>
+      <button type="button" class="btn btn--quiet" id="cancelBtn" data-t="cancel">Cancel</button>
+    </div>
+  </section>
+
+  <!-- ─────────── RESULT ─────────── -->
+  <section class="view view--result" id="view-result" aria-labelledby="resTitle">
+    <div class="result" id="result"></div>
+  </section>
+
+  <!-- ─────────── HISTORY ─────────── -->
+  <section class="view view--history" id="view-history">
+    <h2 data-t="historyTitle">My scans</h2>
+    <p class="muted" data-t="historyNote">Saved on this phone only. Nothing is uploaded.</p>
+    <div id="historyList" class="histlist"></div>
+  </section>
+
+  <!-- ─────────── ABOUT ─────────── -->
+  <section class="view view--about" id="view-about">
+    <h2 data-t="aboutTitle">About Patta</h2>
+    <div class="prose" id="aboutBody"></div>
+  </section>
+
+</main>
+
+<nav class="tabbar" aria-label="Sections">
+  <button type="button" class="tab is-active" data-go="scan">
+    <svg class="ic"><use href="#i-camera"/></svg><span data-t="tabScan">Scan</span>
+  </button>
+  <button type="button" class="tab" data-go="history">
+    <svg class="ic"><use href="#i-stack"/></svg><span data-t="tabHistory">My scans</span>
+  </button>
+  <button type="button" class="tab" data-go="about">
+    <svg class="ic"><use href="#i-info"/></svg><span data-t="tabAbout">About</span>
+  </button>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script type="module">
+window.__PATTA_SINGLE_FILE__ = true;
+/* ── config.js ─────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   The one file you edit to connect the app to a model.
+
+   Patta picks the first route that works, in this order:
+
+     1. claude    — running as a published Claude Artifact. Nothing to
+                    configure; the viewer's own Claude account answers.
+     2. backend   — apiBase is set. The recommended route. Your key
+                    stays on the server. Run backend/main.py.
+     3. direct    — anthropicKey is set. Convenient for a classroom
+                    demo, unsafe anywhere else: the key is visible to
+                    anyone who opens DevTools. Never deploy this.
+     4. samples   — nothing configured, or the network failed. The two
+                    built-in cases answer instead, so the demo never
+                    dies on stage.
+   ───────────────────────────────────────────────────────────── */
+
+const CONFIG = {
+  // e.g. 'http://127.0.0.1:8000' while developing, '' when the API is
+  // served from the same origin as the page.
+  apiBase: '',
+
+  // Leave empty. Only fill this for a local demo you will not publish.
+  anthropicKey: '',
+
+  model: 'claude-sonnet-4-6',
+
+  // Longest edge, in pixels, after the phone shrinks the photo.
+  // 1024 keeps leaf texture readable and still uploads on a weak signal.
+  maxEdge: 1024,
+  jpegQuality: 0.82,
+
+  // Below this, the app stops giving advice and sends the farmer to an
+  // agriculture officer instead.
+  confidenceFloor: 0.6,
+
+  kisanCallCentre: '1800-180-1551',
+
+  // Cap on locally stored scans, so a cheap phone never fills up.
+  historyLimit: 30
+};
+
+/* ── i18n.js ─────────────────────────────── */
+/* Interface strings + per-language metadata.
+   NOTE FOR THE PILOT: the Telugu and Hindi copy below must be read by a
+   native speaker and an agriculture officer before this app is put in
+   front of a farmer. Machine-shaped agricultural wording is exactly the
+   kind of thing that reads fine and advises badly. */
+
+const LANGS = {
+  en: { label: 'EN', name: 'English',  model: 'English', bcp: 'en-IN', voice: ['en-IN', 'en-GB', 'en-US'] },
+  te: { label: 'తె', name: 'తెలుగు',   model: 'Telugu',  bcp: 'te-IN', voice: ['te-IN', 'te'] },
+  hi: { label: 'हि', name: 'हिन्दी',    model: 'Hindi',   bcp: 'hi-IN', voice: ['hi-IN', 'hi'] }
+};
+
+const CROPS = [
+  { id: 'rice',      en: 'Rice',      te: 'వరి',        hi: 'धान' },
+  { id: 'cotton',    en: 'Cotton',    te: 'పత్తి',      hi: 'कपास' },
+  { id: 'chilli',    en: 'Chilli',    te: 'మిరప',       hi: 'मिर्च' },
+  { id: 'tomato',    en: 'Tomato',    te: 'టమాటా',      hi: 'टमाटर' },
+  { id: 'groundnut', en: 'Groundnut', te: 'వేరుశనగ',    hi: 'मूंगफली' },
+  { id: 'maize',     en: 'Maize',     te: 'మొక్కజొన్న',  hi: 'मक्का' },
+  { id: 'banana',    en: 'Banana',    te: 'అరటి',       hi: 'केला' },
+  { id: 'sugarcane', en: 'Sugarcane', te: 'చెరకు',      hi: 'गन्ना' }
+];
+
+const T = {
+  en: {
+    tagline: 'AI crop-health advisor',
+    scanTitle: 'Scan a leaf',
+    frameHint: 'Fill the frame with one leaf. Good light, no shadow.',
+    takePhoto: 'Take photo', gallery: 'Gallery', removePhoto: 'Remove photo',
+    cropLabel: 'Which crop? (optional)',
+    noteLabel: 'Anything you noticed? (optional)',
+    notePh: 'Started 3 days ago, lower leaves first…',
+    speak: 'Speak instead of typing',
+    listening: 'Listening — speak now.',
+    micUnsupported: 'This phone cannot take voice notes. Type instead.',
+    noLeaf: 'No leaf nearby?', sample1: 'Try a tomato sample', sample2: 'Try a rice sample',
+    diagnose: 'Diagnose', needPhoto: 'Add a photo to start', readyNote: 'Takes about 20 seconds',
+    busy1: 'Looking at the leaf…', busy2: 'Matching the symptoms…', busy3: 'Writing your plan…',
+    cancel: 'Cancel', cancelled: 'Stopped. Nothing was saved.',
+    tabScan: 'Scan', tabHistory: 'My scans', tabAbout: 'About',
+
+    severity: 'Severity', confidence: 'How sure', spread: 'Spread risk',
+    low: 'Low', moderate: 'Moderate', high: 'High', medium: 'Medium',
+    lowConf: 'Patta is not confident about this one. Show the leaf to an agriculture officer before you spray anything.',
+    whatISee: 'What I can see', whyHappens: 'Why this happens',
+    planTitle: 'What to do', prevention: 'Stop it coming back', expertIf: 'See an expert if',
+    neighbours: 'Tell your neighbours',
+    kindField: 'field care', kindOrganic: 'natural', kindChemical: 'chemical',
+    listen: 'Listen', stopListen: 'Stop', share: 'Share', again: 'Scan another leaf',
+    callKCC: 'Call Kisan Call Centre', helpful: 'Was this helpful?', yes: 'Yes', no: 'No',
+    thanks: 'Thank you. This helps us improve.',
+    noDose: 'No dose is given on purpose. Follow the label on the pack and your local officer.',
+
+    historyTitle: 'My scans', historyNote: 'Saved on this phone only. Nothing is uploaded.',
+    emptyHistory: 'Your scans will appear here. Go to Scan and photograph a leaf.',
+    delete: 'Delete', deleted: 'Scan deleted.',
+    aboutTitle: 'About Patta',
+
+    errNotPlant: 'That does not look like a plant. Photograph a leaf, filling the frame.',
+    errBlurry: 'The photo is blurry. Hold still, tap the leaf to focus, and take it again.',
+    errDark: 'Too dark to read. Move into daylight and try again.',
+    errNet: 'Could not reach the AI. Check your connection, or try a sample case.',
+    errBusy: 'Too many requests right now. Wait a minute and try again.',
+    errGeneric: 'Something went wrong. Try again, or try a sample case.',
+    offlineSample: 'Offline — showing a saved sample case.',
+    copied: 'Copied. Paste it into WhatsApp.',
+    noVoice: 'This phone has no voice for this language. Install it in Settings, or read the text.'
+  },
+
+  te: {
+    tagline: 'AI పంట ఆరోగ్య సలహాదారు',
+    scanTitle: 'ఆకును స్కాన్ చేయండి',
+    frameHint: 'ఒక ఆకు ఫ్రేమ్ నిండా ఉండాలి. మంచి వెలుతురు, నీడ వద్దు.',
+    takePhoto: 'ఫోటో తీయండి', gallery: 'గ్యాలరీ', removePhoto: 'ఫోటో తీసివేయండి',
+    cropLabel: 'ఏ పంట? (ఐచ్ఛికం)',
+    noteLabel: 'మీరు గమనించినది ఏమైనా? (ఐచ్ఛికం)',
+    notePh: 'మూడు రోజుల క్రితం మొదలైంది, కింది ఆకుల నుండి…',
+    speak: 'టైప్ చేయకుండా మాట్లాడండి',
+    listening: 'వింటున్నాను — ఇప్పుడు మాట్లాడండి.',
+    micUnsupported: 'ఈ ఫోన్‌లో వాయిస్ నోట్ పని చేయదు. టైప్ చేయండి.',
+    noLeaf: 'దగ్గర ఆకు లేదా?', sample1: 'టమాటా నమూనా చూడండి', sample2: 'వరి నమూనా చూడండి',
+    diagnose: 'పరీక్షించండి', needPhoto: 'మొదలుపెట్టడానికి ఫోటో జోడించండి', readyNote: 'సుమారు 20 సెకన్లు పడుతుంది',
+    busy1: 'ఆకును చూస్తున్నాను…', busy2: 'లక్షణాలను పోలుస్తున్నాను…', busy3: 'మీ ప్రణాళిక రాస్తున్నాను…',
+    cancel: 'రద్దు చేయండి', cancelled: 'ఆపివేయబడింది. ఏదీ సేవ్ కాలేదు.',
+    tabScan: 'స్కాన్', tabHistory: 'నా స్కాన్‌లు', tabAbout: 'గురించి',
+
+    severity: 'తీవ్రత', confidence: 'ఎంత ఖచ్చితం', spread: 'వ్యాప్తి ప్రమాదం',
+    low: 'తక్కువ', moderate: 'మధ్యస్థం', high: 'ఎక్కువ', medium: 'మధ్యస్థం',
+    lowConf: 'దీనిపై పట్టాకు స్పష్టత లేదు. ఏదైనా పిచికారీ చేసే ముందు వ్యవసాయ అధికారికి ఆకును చూపించండి.',
+    whatISee: 'నాకు కనిపిస్తున్నది', whyHappens: 'ఇది ఎందుకు వస్తుంది',
+    planTitle: 'ఏం చేయాలి', prevention: 'మళ్ళీ రాకుండా', expertIf: 'నిపుణుడిని కలవండి — ఎప్పుడంటే',
+    neighbours: 'పక్క రైతులకు చెప్పండి',
+    kindField: 'పొలం పని', kindOrganic: 'సహజం', kindChemical: 'రసాయనం',
+    listen: 'వినండి', stopListen: 'ఆపండి', share: 'పంచుకోండి', again: 'మరో ఆకు స్కాన్ చేయండి',
+    callKCC: 'కిసాన్ కాల్ సెంటర్‌కు ఫోన్', helpful: 'ఇది ఉపయోగపడిందా?', yes: 'అవును', no: 'లేదు',
+    thanks: 'ధన్యవాదాలు. ఇది మెరుగుపరచడానికి సాయపడుతుంది.',
+    noDose: 'మోతాదు ఉద్దేశపూర్వకంగా ఇవ్వలేదు. ప్యాకెట్‌పై ఉన్న లేబుల్‌ను, మీ అధికారి సలహాను పాటించండి.',
+
+    historyTitle: 'నా స్కాన్‌లు', historyNote: 'ఈ ఫోన్‌లోనే సేవ్ అవుతాయి. ఎక్కడికీ పంపబడవు.',
+    emptyHistory: 'మీ స్కాన్‌లు ఇక్కడ కనిపిస్తాయి. స్కాన్‌కు వెళ్లి ఆకు ఫోటో తీయండి.',
+    delete: 'తొలగించండి', deleted: 'స్కాన్ తొలగించబడింది.',
+    aboutTitle: 'పట్టా గురించి',
+
+    errNotPlant: 'ఇది మొక్కలా అనిపించడం లేదు. ఫ్రేమ్ నిండా ఆకు ఉండేలా ఫోటో తీయండి.',
+    errBlurry: 'ఫోటో మసకగా ఉంది. ఫోన్ కదలకుండా పట్టుకుని, ఆకుపై తాకి ఫోకస్ చేసి మళ్ళీ తీయండి.',
+    errDark: 'చాలా చీకటిగా ఉంది. వెలుతురులోకి వచ్చి మళ్ళీ ప్రయత్నించండి.',
+    errNet: 'AI అందుబాటులో లేదు. కనెక్షన్ చూసుకోండి, లేదా నమూనా కేసు చూడండి.',
+    errBusy: 'ఇప్పుడు చాలా అభ్యర్థనలు ఉన్నాయి. ఒక నిమిషం ఆగి ప్రయత్నించండి.',
+    errGeneric: 'ఏదో తప్పు జరిగింది. మళ్ళీ ప్రయత్నించండి, లేదా నమూనా కేసు చూడండి.',
+    offlineSample: 'ఆఫ్‌లైన్ — సేవ్ చేసిన నమూనా కేసు చూపుతున్నాను.',
+    copied: 'కాపీ అయ్యింది. వాట్సాప్‌లో పేస్ట్ చేయండి.',
+    noVoice: 'ఈ భాషకు ఫోన్‌లో వాయిస్ లేదు. సెట్టింగ్స్‌లో ఇన్‌స్టాల్ చేయండి, లేదా చదువుకోండి.'
+  },
+
+  hi: {
+    tagline: 'AI फसल-स्वास्थ्य सलाहकार',
+    scanTitle: 'पत्ती स्कैन करें',
+    frameHint: 'एक पत्ती फ्रेम में पूरी आए। अच्छी रोशनी, छाया नहीं।',
+    takePhoto: 'फोटो लें', gallery: 'गैलरी', removePhoto: 'फोटो हटाएँ',
+    cropLabel: 'कौन सी फसल? (वैकल्पिक)',
+    noteLabel: 'आपने क्या देखा? (वैकल्पिक)',
+    notePh: 'तीन दिन पहले शुरू हुआ, नीचे की पत्तियों से…',
+    speak: 'लिखने के बजाय बोलें',
+    listening: 'सुन रहा हूँ — अब बोलिए।',
+    micUnsupported: 'इस फोन पर वॉइस नोट नहीं चलता। टाइप करें।',
+    noLeaf: 'पास में पत्ती नहीं है?', sample1: 'टमाटर का नमूना देखें', sample2: 'धान का नमूना देखें',
+    diagnose: 'जाँच करें', needPhoto: 'शुरू करने के लिए फोटो जोड़ें', readyNote: 'लगभग 20 सेकंड लगेंगे',
+    busy1: 'पत्ती देख रहा हूँ…', busy2: 'लक्षण मिला रहा हूँ…', busy3: 'आपकी योजना लिख रहा हूँ…',
+    cancel: 'रद्द करें', cancelled: 'रोक दिया गया। कुछ सेव नहीं हुआ।',
+    tabScan: 'स्कैन', tabHistory: 'मेरे स्कैन', tabAbout: 'जानकारी',
+
+    severity: 'गंभीरता', confidence: 'कितना पक्का', spread: 'फैलने का खतरा',
+    low: 'कम', moderate: 'मध्यम', high: 'ज़्यादा', medium: 'मध्यम',
+    lowConf: 'पत्ता इस पर पक्का नहीं है। छिड़काव से पहले कृषि अधिकारी को पत्ती दिखाएँ।',
+    whatISee: 'मुझे क्या दिख रहा है', whyHappens: 'ऐसा क्यों होता है',
+    planTitle: 'क्या करें', prevention: 'दोबारा न हो इसके लिए', expertIf: 'विशेषज्ञ से मिलें — जब',
+    neighbours: 'पड़ोसी किसानों को बताएँ',
+    kindField: 'खेत का काम', kindOrganic: 'प्राकृतिक', kindChemical: 'रासायनिक',
+    listen: 'सुनें', stopListen: 'रोकें', share: 'साझा करें', again: 'दूसरी पत्ती स्कैन करें',
+    callKCC: 'किसान कॉल सेंटर पर फोन', helpful: 'क्या यह काम आया?', yes: 'हाँ', no: 'नहीं',
+    thanks: 'धन्यवाद। इससे हमें सुधार में मदद मिलती है।',
+    noDose: 'मात्रा जानबूझकर नहीं दी गई है। पैक पर लिखा लेबल और अपने अधिकारी की सलाह मानें।',
+
+    historyTitle: 'मेरे स्कैन', historyNote: 'सिर्फ इसी फोन में सेव हैं। कहीं नहीं भेजे जाते।',
+    emptyHistory: 'आपके स्कैन यहाँ दिखेंगे। स्कैन पर जाकर पत्ती की फोटो लें।',
+    delete: 'हटाएँ', deleted: 'स्कैन हटा दिया गया।',
+    aboutTitle: 'पत्ता के बारे में',
+
+    errNotPlant: 'यह पौधा नहीं लगता। फ्रेम भरकर पत्ती की फोटो लें।',
+    errBlurry: 'फोटो धुंधली है। फोन स्थिर रखें, पत्ती पर टैप करके फोकस करें, फिर से लें।',
+    errDark: 'बहुत अँधेरा है। दिन की रोशनी में आकर फिर लें।',
+    errNet: 'AI तक नहीं पहुँच पाए। कनेक्शन देखें, या नमूना केस देखें।',
+    errBusy: 'अभी बहुत अनुरोध हैं। एक मिनट रुककर फिर कोशिश करें।',
+    errGeneric: 'कुछ गड़बड़ हुई। फिर कोशिश करें, या नमूना केस देखें।',
+    offlineSample: 'ऑफलाइन — सेव किया हुआ नमूना केस दिखा रहे हैं।',
+    copied: 'कॉपी हो गया। व्हाट्सएप में पेस्ट करें।',
+    noVoice: 'इस भाषा के लिए फोन में आवाज़ नहीं है। सेटिंग्स में इंस्टॉल करें, या पढ़ लें।'
+  }
+};
+
+const ABOUT = {
+  en: `<p>Patta turns one photo of a leaf into a plan a farmer can act on today, in the language they speak.</p>
+<h3>How it works</h3><ul>
+<li>You photograph a leaf. The photo is shrunk on your phone before it is sent.</li>
+<li>A vision AI model reads the leaf and returns a diagnosis and an ordered plan.</li>
+<li>The plan is written in your language and can be read aloud.</li>
+<li>Scans stay in this phone's storage. No account, no upload of your history.</li></ul>
+<h3>Rules Patta follows</h3><ul>
+<li>Field care and natural options come first. Chemicals come last.</li>
+<li>Active ingredients only — never a brand, never a dose.</li>
+<li>When it is unsure, it says so and sends you to an agriculture officer.</li></ul>
+<h3>Honest limits</h3>
+<p>Patta is an early prototype and not a replacement for an agriculture officer. It has not yet been checked against a labelled photo set by an agronomist. Do not spray on its word alone.</p>
+<p>Kisan Call Centre: 1800-180-1551, free, 6am to 10pm.</p>`,
+
+  te: `<p>ఒక ఆకు ఫోటోను, రైతు ఈరోజే అమలు చేయగల ప్రణాళికగా పట్టా మారుస్తుంది — వారి భాషలోనే.</p>
+<h3>ఇది ఎలా పనిచేస్తుంది</h3><ul>
+<li>మీరు ఆకు ఫోటో తీస్తారు. పంపే ముందు ఫోటో మీ ఫోన్‌లోనే చిన్నదిగా మారుతుంది.</li>
+<li>విజన్ AI మోడల్ ఆకును చదివి, రోగనిర్ధారణ మరియు వరుస క్రమంలో ప్రణాళిక ఇస్తుంది.</li>
+<li>ప్రణాళిక మీ భాషలో ఉంటుంది, చదివి వినిపించవచ్చు.</li>
+<li>స్కాన్‌లు ఈ ఫోన్‌లోనే ఉంటాయి. ఖాతా అవసరం లేదు.</li></ul>
+<h3>పట్టా పాటించే నియమాలు</h3><ul>
+<li>ముందు పొలం పని, సహజ పద్ధతులు. రసాయనాలు చివరన.</li>
+<li>క్రియాశీల పదార్థం మాత్రమే — బ్రాండ్ లేదు, మోతాదు లేదు.</li>
+<li>సందేహం ఉంటే అది చెబుతుంది, అధికారి దగ్గరకు పంపుతుంది.</li></ul>
+<h3>నిజాయితీగా చెప్పాలంటే</h3>
+<p>పట్టా ఇంకా ప్రారంభ నమూనా మాత్రమే. వ్యవసాయ అధికారికి ఇది ప్రత్యామ్నాయం కాదు. దీని మాట మీదే పిచికారీ చేయవద్దు.</p>
+<p>కిసాన్ కాల్ సెంటర్: 1800-180-1551, ఉచితం, ఉదయం 6 నుండి రాత్రి 10 వరకు.</p>`,
+
+  hi: `<p>पत्ता एक पत्ती की फोटो को ऐसी योजना में बदलता है जिस पर किसान आज ही काम कर सके — उसी की भाषा में।</p>
+<h3>यह कैसे काम करता है</h3><ul>
+<li>आप पत्ती की फोटो लेते हैं। भेजने से पहले फोटो फोन में ही छोटी हो जाती है।</li>
+<li>विज़न AI मॉडल पत्ती पढ़कर पहचान और क्रम से योजना देता है।</li>
+<li>योजना आपकी भाषा में होती है और सुनाई भी जा सकती है।</li>
+<li>स्कैन इसी फोन में रहते हैं। कोई खाता नहीं चाहिए।</li></ul>
+<h3>पत्ता के नियम</h3><ul>
+<li>पहले खेत का काम और प्राकृतिक उपाय। रसायन सबसे आखिर में।</li>
+<li>सिर्फ सक्रिय तत्व — कोई ब्रांड नहीं, कोई मात्रा नहीं।</li>
+<li>पक्का न हो तो वह साफ कहता है और अधिकारी के पास भेजता है।</li></ul>
+<h3>साफ बात</h3>
+<p>पत्ता अभी शुरुआती प्रोटोटाइप है, कृषि अधिकारी का विकल्प नहीं। सिर्फ इसके कहने पर छिड़काव न करें।</p>
+<p>किसान कॉल सेंटर: 1800-180-1551, निःशुल्क, सुबह 6 से रात 10 बजे तक।</p>`
+};
+
+/* ── data.js ─────────────────────────────── */
+/* Two built-in cases so the demo works with no leaf, no network and no
+   API key. The illustrations are drawn, not photographed — a fake photo
+   would be a lie about what the model was given. */
+
+const svg = (s) => 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(s.replace(/\s+/g, ' ').trim());
+
+const SAMPLE_IMAGES = {
+  tomato_early_blight: svg(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#6E7F4B"/>
+  <g stroke="#3D5227" stroke-width="2" opacity=".5">
+    <path d="M-20 260 L200 60 M60 300 L320 30 M-20 140 L160 -20"/>
+  </g>
+  <path d="M200 30c70 0 120 55 120 120s-55 125-120 125S80 215 80 150 130 30 200 30Z" fill="#7FA03F"/>
+  <path d="M200 32c-26 22-42 60-42 118s16 96 42 118" fill="none" stroke="#5F7C2B" stroke-width="3"/>
+  <path d="M200 32c26 22 42 60 42 118s-16 96-42 118" fill="none" stroke="#5F7C2B" stroke-width="3"/>
+  <path d="M200 30v245" stroke="#4E6822" stroke-width="5" fill="none"/>
+  <g>
+    <circle cx="150" cy="118" r="26" fill="#C9A24A" opacity=".85"/>
+    <circle cx="150" cy="118" r="18" fill="#8A6321"/><circle cx="150" cy="118" r="11" fill="#5C3F12"/>
+    <circle cx="245" cy="180" r="21" fill="#C9A24A" opacity=".85"/>
+    <circle cx="245" cy="180" r="14" fill="#8A6321"/><circle cx="245" cy="180" r="8" fill="#5C3F12"/>
+    <circle cx="178" cy="215" r="15" fill="#B4913F" opacity=".8"/><circle cx="178" cy="215" r="8" fill="#6E4C17"/>
+    <circle cx="232" cy="92" r="11" fill="#B4913F" opacity=".8"/><circle cx="232" cy="92" r="5" fill="#6E4C17"/>
+  </g>
+  <ellipse cx="150" cy="118" rx="40" ry="34" fill="#D6C15F" opacity=".3"/>
+  <ellipse cx="245" cy="180" rx="34" ry="30" fill="#D6C15F" opacity=".3"/>
+</svg>`),
+
+  rice_blast: svg(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#5E6F42"/>
+  <g stroke="#47572F" stroke-width="3" opacity=".6">
+    <path d="M30 300C60 200 40 120 20 40M370 300c-30-110-10-180 10-250"/>
+  </g>
+  <path d="M120 290C150 200 170 110 195 20c28 92 44 182 70 270Z" fill="#8FAE4B"/>
+  <path d="M195 20c-6 90-14 180-20 270" stroke="#63813A" stroke-width="4" fill="none"/>
+  <g fill="#D9CE9B" stroke="#7A5C25" stroke-width="2">
+    <ellipse cx="176" cy="120" rx="10" ry="26" transform="rotate(-8 176 120)"/>
+    <ellipse cx="206" cy="175" rx="12" ry="31" transform="rotate(6 206 175)"/>
+    <ellipse cx="168" cy="205" rx="8" ry="20" transform="rotate(-10 168 205)"/>
+    <ellipse cx="216" cy="102" rx="7" ry="17" transform="rotate(5 216 102)"/>
+  </g>
+  <g fill="#6B4F1E">
+    <ellipse cx="176" cy="120" rx="3" ry="14" transform="rotate(-8 176 120)"/>
+    <ellipse cx="206" cy="175" rx="4" ry="17" transform="rotate(6 206 175)"/>
+  </g>
+</svg>`)
+};
+
+/* Shape of every diagnosis, sample or live. Keep the two in sync. */
+const SAMPLES = {
+  tomato_early_blight: {
+    en: {
+      ok: true, is_plant: true, image_quality: 'good', crop: 'Tomato',
+      problem: 'Early blight', problem_local: 'Early blight (Alternaria)',
+      confidence: 0.82, severity: 'moderate', spread_risk: 'medium',
+      what_i_see: 'Brown spots on the older, lower leaves. Each spot has rings inside it, like a target, with a yellow edge around it. The top of the plant still looks healthy.',
+      why_it_happens: 'A fungus that lives in old crop waste and soil. Rain or overhead water splashes it onto the lowest leaves first, and warm humid days let it grow.',
+      steps: [
+        { kind: 'field', title: 'Remove the worst leaves today', detail: 'Pick off the spotted lower leaves and carry them out of the field. Do not leave them between the rows, and do not put them in the compost.', when: 'Today' },
+        { kind: 'field', title: 'Water at the base, not from above', detail: 'Wet leaves let the fungus spread. Water the soil early in the day so leaves dry before evening.', when: 'From today' },
+        { kind: 'organic', title: 'Spray neem oil in the evening', detail: 'Cover both sides of the leaves. Repeat after a week. Spray after sunset so the leaves do not burn.', when: 'This week' },
+        { kind: 'chemical', title: 'If it keeps spreading, ask about a copper-based fungicide', detail: 'Copper oxychloride or mancozeb are the usual active ingredients for this. Ask your agriculture officer first and follow the label on the pack. Do not mix your own strength.', when: 'Only if it spreads' }
+      ],
+      prevention: ['Space plants so air moves between them', 'Mulch the soil so rain does not splash it up', 'Rotate away from tomato, chilli and potato next season', 'Clear old crop waste after harvest'],
+      see_expert_if: ['Spots reach the fruit or the stem', 'More than half the plant is affected', 'It spreads to a new row within three days'],
+      neighbour_alert: 'Tell the neighbouring field to check their lower leaves this week.'
+    },
+    te: {
+      ok: true, is_plant: true, image_quality: 'good', crop: 'టమాటా',
+      problem: 'ఎర్లీ బ్లైట్ (ఆకుమచ్చ తెగులు)', problem_local: 'Early blight (Alternaria)',
+      confidence: 0.82, severity: 'moderate', spread_risk: 'medium',
+      what_i_see: 'కింది పాత ఆకులపై గోధుమ రంగు మచ్చలు. ప్రతి మచ్చ లోపల గురిలా వలయాలు, చుట్టూ పసుపు అంచు. మొక్క పై భాగం ఇంకా ఆరోగ్యంగా ఉంది.',
+      why_it_happens: 'పాత పంట వ్యర్థాలలో, నేలలో బతికే శిలీంధ్రం. వర్షం లేదా పైనుండి నీరు పడినప్పుడు అది కింది ఆకులపైకి చిమ్ముతుంది. వెచ్చని తేమ వాతావరణంలో వేగంగా పెరుగుతుంది.',
+      steps: [
+        { kind: 'field', title: 'చెడిపోయిన ఆకులను ఈరోజే తీసివేయండి', detail: 'మచ్చలున్న కింది ఆకులను తుంచి పొలం బయటకు తీసుకెళ్లండి. వరుసల మధ్య వదలవద్దు, కంపోస్ట్‌లో వేయవద్దు.', when: 'ఈరోజు' },
+        { kind: 'field', title: 'పైనుండి కాకుండా మొదట్లో నీరు పెట్టండి', detail: 'ఆకులు తడిస్తే తెగులు వ్యాపిస్తుంది. ఉదయాన్నే నేలకు నీరు పెట్టండి, సాయంత్రానికి ఆకులు ఆరిపోవాలి.', when: 'ఈరోజు నుండి' },
+        { kind: 'organic', title: 'సాయంత్రం వేపనూనె పిచికారీ', detail: 'ఆకు రెండు వైపులా తడిచేలా పిచికారీ చేయండి. వారం తర్వాత మళ్ళీ చేయండి. ఎండ తగ్గాక చేయండి, లేకపోతే ఆకులు కాలుతాయి.', when: 'ఈ వారం' },
+        { kind: 'chemical', title: 'ఇంకా వ్యాపిస్తే రాగి ఆధారిత శిలీంధ్రనాశినిని అడగండి', detail: 'దీనికి సాధారణంగా కాపర్ ఆక్సీక్లోరైడ్ లేదా మాంకోజెబ్ వాడతారు. ముందు వ్యవసాయ అధికారిని అడగండి, ప్యాకెట్ లేబుల్ పాటించండి. మీ ఇష్టం వచ్చిన మోతాదు కలపవద్దు.', when: 'వ్యాపిస్తే మాత్రమే' }
+      ],
+      prevention: ['మొక్కల మధ్య గాలి ఆడేలా దూరం ఉంచండి', 'నేలపై మల్చింగ్ వేయండి, వర్షం మట్టిని చిమ్మకుండా', 'వచ్చే సీజన్‌లో టమాటా, మిరప, బంగాళాదుంప కాకుండా వేరే పంట', 'కోత తర్వాత పాత పంట వ్యర్థాలు తీసివేయండి'],
+      see_expert_if: ['మచ్చలు కాయలకు లేదా కాండానికి చేరితే', 'సగానికి పైగా మొక్క దెబ్బతింటే', 'మూడు రోజుల్లో కొత్త వరుసకు వ్యాపిస్తే'],
+      neighbour_alert: 'పక్క పొలం వారికి చెప్పండి — ఈ వారం వారి కింది ఆకులు చూసుకోమని.'
+    },
+    hi: {
+      ok: true, is_plant: true, image_quality: 'good', crop: 'टमाटर',
+      problem: 'अगेती झुलसा (अर्ली ब्लाइट)', problem_local: 'Early blight (Alternaria)',
+      confidence: 0.82, severity: 'moderate', spread_risk: 'medium',
+      what_i_see: 'नीचे की पुरानी पत्तियों पर भूरे धब्बे। हर धब्बे के अंदर निशाने जैसे छल्ले और किनारे पर पीलापन। पौधे का ऊपरी हिस्सा अभी ठीक दिख रहा है।',
+      why_it_happens: 'एक फफूंद जो पुराने फसल अवशेष और मिट्टी में रहती है। बारिश या ऊपर से पानी पड़ने पर छींटों के साथ नीचे की पत्तियों पर चढ़ती है, और गर्म-नम मौसम में तेज़ी से बढ़ती है।',
+      steps: [
+        { kind: 'field', title: 'खराब पत्तियाँ आज ही हटाएँ', detail: 'धब्बे वाली निचली पत्तियाँ तोड़कर खेत से बाहर ले जाएँ। कतारों के बीच न छोड़ें और खाद में न डालें।', when: 'आज' },
+        { kind: 'field', title: 'ऊपर से नहीं, जड़ में पानी दें', detail: 'गीली पत्तियाँ रोग फैलाती हैं। सुबह जल्दी मिट्टी में पानी दें ताकि शाम तक पत्तियाँ सूख जाएँ।', when: 'आज से' },
+        { kind: 'organic', title: 'शाम को नीम तेल का छिड़काव', detail: 'पत्तियों के दोनों ओर छिड़कें। एक हफ्ते बाद दोहराएँ। धूप ढलने के बाद करें, वरना पत्तियाँ झुलस सकती हैं।', when: 'इस हफ्ते' },
+        { kind: 'chemical', title: 'फिर भी फैले तो तांबा-आधारित फफूंदनाशी के बारे में पूछें', detail: 'इसके लिए आम तौर पर कॉपर ऑक्सीक्लोराइड या मैंकोज़ेब सक्रिय तत्व होते हैं। पहले कृषि अधिकारी से पूछें और पैक का लेबल मानें। अपने हिसाब से मात्रा न बनाएँ।', when: 'सिर्फ फैलने पर' }
+      ],
+      prevention: ['पौधों के बीच हवा चलने लायक दूरी रखें', 'मिट्टी पर मल्च डालें ताकि बारिश के छींटे न उठें', 'अगले मौसम में टमाटर, मिर्च, आलू के बजाय दूसरी फसल लें', 'कटाई के बाद पुराने अवशेष हटा दें'],
+      see_expert_if: ['धब्बे फल या तने तक पहुँच जाएँ', 'आधे से ज़्यादा पौधा प्रभावित हो', 'तीन दिन में नई कतार तक फैल जाए'],
+      neighbour_alert: 'पड़ोसी खेत वालों को बताएँ कि इस हफ्ते अपनी निचली पत्तियाँ देख लें।'
+    }
+  },
+
+  rice_blast: {
+    en: {
+      ok: true, is_plant: true, image_quality: 'good', crop: 'Rice',
+      problem: 'Rice blast', problem_local: 'Leaf blast (Pyricularia)',
+      confidence: 0.58, severity: 'high', spread_risk: 'high',
+      what_i_see: 'Spindle-shaped spots on the leaf blade, pale grey in the middle with a darker brown border. Several spots are joining into larger dead patches.',
+      why_it_happens: 'A fast fungus. Cool nights with dew, thick stands and heavy nitrogen give it everything it needs. Spores travel on wind between fields.',
+      steps: [
+        { kind: 'field', title: 'Show this leaf to an agriculture officer first', detail: 'Patta is not confident here, and blast moves quickly. Take this leaf, or this photo, to your officer today before you buy anything.', when: 'Today' },
+        { kind: 'field', title: 'Stop extra nitrogen now', detail: 'Do not top-dress urea while the spots are spreading. Soft, heavily fed leaves are the easiest for blast to enter.', when: 'Today' },
+        { kind: 'field', title: 'Drain and re-water instead of holding deep water', detail: 'Let the field dry briefly, then re-flood. Constant deep water with a thick canopy keeps the leaves wet all night.', when: 'This week' },
+        { kind: 'chemical', title: 'A systemic fungicide may be needed — through your officer', detail: 'Tricyclazole and isoprothiolane are the active ingredients usually recommended for blast. Confirm the diagnosis first, and follow the label on the pack. No dose is given here on purpose.', when: 'After confirmation' }
+      ],
+      prevention: ['Use a blast-tolerant variety next season', 'Split nitrogen into smaller doses instead of one heavy one', 'Keep the seed from a clean field, treat it before sowing', 'Do not sow too thickly'],
+      see_expert_if: ['Spots appear at the node or on the neck of the panicle', 'New patches appear each morning', 'More than a tenth of the field is affected'],
+      neighbour_alert: 'Blast travels on wind. Tell the fields around you to check this week — neck blast at flowering can take the whole crop.'
+    },
+    te: {
+      ok: true, is_plant: true, image_quality: 'good', crop: 'వరి',
+      problem: 'అగ్గి తెగులు (బ్లాస్ట్)', problem_local: 'Leaf blast (Pyricularia)',
+      confidence: 0.58, severity: 'high', spread_risk: 'high',
+      what_i_see: 'ఆకుపై కదురు ఆకారపు మచ్చలు. మధ్యలో లేత బూడిద రంగు, చుట్టూ ముదురు గోధుమ అంచు. కొన్ని మచ్చలు కలిసి పెద్ద ఎండిన మచ్చలుగా మారుతున్నాయి.',
+      why_it_happens: 'చాలా వేగంగా వ్యాపించే శిలీంధ్రం. చల్లని రాత్రులు, మంచు, దట్టమైన నాట్లు, ఎక్కువ నత్రజని — ఇవన్నీ దీనికి అనుకూలం. గాలి ద్వారా పొలం నుండి పొలానికి వ్యాపిస్తుంది.',
+      steps: [
+        { kind: 'field', title: 'ముందుగా ఈ ఆకును వ్యవసాయ అధికారికి చూపించండి', detail: 'పట్టాకు ఇక్కడ పూర్తి స్పష్టత లేదు, అగ్గి తెగులు చాలా వేగంగా వ్యాపిస్తుంది. ఏదైనా కొనే ముందు ఈరోజే ఈ ఆకును లేదా ఈ ఫోటోను అధికారికి చూపండి.', when: 'ఈరోజు' },
+        { kind: 'field', title: 'ఇప్పుడు అదనపు నత్రజని ఆపండి', detail: 'మచ్చలు వ్యాపిస్తున్నంత వరకు యూరియా వేయవద్దు. ఎక్కువ నత్రజని ఉన్న మెత్తని ఆకుల్లోకి తెగులు సులభంగా చొరబడుతుంది.', when: 'ఈరోజు' },
+        { kind: 'field', title: 'లోతు నీరు నిలపకుండా, తీసి మళ్ళీ పెట్టండి', detail: 'పొలం కొద్దిగా ఆరనివ్వండి, తర్వాత మళ్ళీ నీరు పెట్టండి. దట్టమైన పైరుతో ఎప్పుడూ లోతు నీరు ఉంటే ఆకులు రాత్రంతా తడిగా ఉంటాయి.', when: 'ఈ వారం' },
+        { kind: 'chemical', title: 'సిస్టమిక్ శిలీంధ్రనాశిని అవసరం కావచ్చు — అధికారి ద్వారా', detail: 'అగ్గి తెగులుకు సాధారణంగా ట్రైసైక్లాజోల్, ఐసోప్రొథయోలేన్ సూచిస్తారు. ముందు నిర్ధారణ చేయించుకోండి, ప్యాకెట్ లేబుల్ పాటించండి. మోతాదు ఇక్కడ ఉద్దేశపూర్వకంగా ఇవ్వలేదు.', when: 'నిర్ధారణ తర్వాత' }
+      ],
+      prevention: ['వచ్చే సీజన్‌లో తట్టుకునే రకం వాడండి', 'నత్రజనిని ఒకేసారి కాక కొద్దికొద్దిగా వేయండి', 'శుభ్రమైన పొలం విత్తనం వాడండి, విత్తే ముందు విత్తన శుద్ధి చేయండి', 'చాలా దట్టంగా నాటవద్దు'],
+      see_expert_if: ['కణుపు వద్ద లేదా కంకి మెడ వద్ద మచ్చలు కనిపిస్తే', 'ప్రతి ఉదయం కొత్త మచ్చలు వస్తుంటే', 'పొలంలో పదో వంతు కంటే ఎక్కువ దెబ్బతింటే'],
+      neighbour_alert: 'ఈ తెగులు గాలిలో ప్రయాణిస్తుంది. చుట్టుపక్కల పొలాలవారికి ఈ వారం చూసుకోమని చెప్పండి — పూత సమయంలో మెడ విరుపు వస్తే పంట మొత్తం పోతుంది.'
+    },
+    hi: {
+      ok: true, is_plant: true, image_quality: 'good', crop: 'धान',
+      problem: 'झोंका रोग (ब्लास्ट)', problem_local: 'Leaf blast (Pyricularia)',
+      confidence: 0.58, severity: 'high', spread_risk: 'high',
+      what_i_see: 'पत्ती पर तकली जैसे धब्बे — बीच में हल्का धूसर, किनारा गहरा भूरा। कुछ धब्बे मिलकर बड़े सूखे हिस्से बना रहे हैं।',
+      why_it_happens: 'बहुत तेज़ फैलने वाली फफूंद। ठंडी ओस वाली रातें, घनी रोपाई और ज़्यादा नाइट्रोजन इसे पूरा मौका देते हैं। बीजाणु हवा से एक खेत से दूसरे तक जाते हैं।',
+      steps: [
+        { kind: 'field', title: 'पहले यह पत्ती कृषि अधिकारी को दिखाएँ', detail: 'पत्ता यहाँ पूरी तरह पक्का नहीं है, और झोंका बहुत तेज़ी से फैलता है। कुछ भी खरीदने से पहले आज ही यह पत्ती या फोटो अधिकारी को दिखाएँ।', when: 'आज' },
+        { kind: 'field', title: 'अभी अतिरिक्त नाइट्रोजन रोक दें', detail: 'जब तक धब्बे फैल रहे हैं, यूरिया का छिड़काव न करें। ज़्यादा खाद वाली मुलायम पत्तियों में रोग सबसे आसानी से घुसता है।', when: 'आज' },
+        { kind: 'field', title: 'गहरा पानी रोकने के बजाय निकालकर दोबारा भरें', detail: 'खेत को थोड़ा सूखने दें, फिर पानी भरें। घनी फसल के साथ लगातार गहरा पानी पत्तियों को रात भर गीला रखता है।', when: 'इस हफ्ते' },
+        { kind: 'chemical', title: 'सिस्टमिक फफूंदनाशी की ज़रूरत हो सकती है — अधिकारी के ज़रिए', detail: 'झोंका के लिए आम तौर पर ट्राइसाइक्लाज़ोल और आइसोप्रोथायोलेन बताए जाते हैं। पहले पहचान पक्की कराएँ और पैक का लेबल मानें। मात्रा यहाँ जानबूझकर नहीं दी गई।', when: 'पुष्टि के बाद' }
+      ],
+      prevention: ['अगले मौसम में रोग-सहनशील किस्म लें', 'नाइट्रोजन एक बार में नहीं, थोड़ा-थोड़ा दें', 'साफ खेत का बीज लें और बुवाई से पहले बीजोपचार करें', 'बहुत घनी रोपाई न करें'],
+      see_expert_if: ['गाँठ पर या बाली की गर्दन पर धब्बे दिखें', 'हर सुबह नए धब्बे बनें', 'खेत का दसवाँ हिस्सा से ज़्यादा प्रभावित हो'],
+      neighbour_alert: 'यह रोग हवा से फैलता है। आसपास के खेतों को इस हफ्ते जाँच करने को कहें — फूल आते समय गर्दन का झोंका पूरी फसल ले जा सकता है।'
+    }
+  }
+};
+
+/* ── prompt.js ─────────────────────────────── */
+/* The prompt is where the safety of this product actually lives.
+   Keep it identical to backend/prompt.txt — the backend serves the same
+   rules so both routes behave the same way. */
+
+function buildPrompt({ language = 'English', crop = 'not stated', note = '' }) {
+  return `You are an agricultural extension assistant looking at a photo of a crop leaf sent by a smallholder farmer in India. Give a careful, practical, honest reading.
+
+WHAT THE FARMER TOLD YOU
+Crop: ${crop || 'not stated'}
+Their note: ${note || 'none'}
+Answer in: ${language}
+
+HOW TO JUDGE THE PHOTO
+- If it is not a plant, set is_plant false and stop there.
+- If it is too blurry, too dark or too far away to judge, set image_quality "poor" and say what to change in the retake.
+- Look at the shape, colour, edge and pattern of the damage, where it sits on the leaf, and what stage the plant is at.
+- Nutrient problems, water stress, heat and pest damage look like disease. Consider them before naming a pathogen.
+
+HONESTY RULES (these matter more than being helpful)
+- confidence is your real confidence, 0 to 1. A photo that could be three things gets a low number.
+- Below 0.6, the first step must be to show the leaf to an agriculture officer before buying or spraying anything.
+- Never invent a precise disease name to sound certain. "A leaf spot, several causes possible" is a better answer than a confident wrong one.
+
+ADVICE RULES
+- Order the steps: field care first, then natural or biological options, chemicals last.
+- Every step must be something a smallholder can do with what a village has.
+- Chemicals: name the ACTIVE INGREDIENT only. Never a brand. Never a dose, concentration, or litres per acre. Always point to the label on the pack and the local agriculture officer.
+- Never suggest a pesticide banned in India or classed by WHO as highly hazardous.
+- Say when each step should happen: today, this week, only if it spreads.
+
+LANGUAGE RULES
+- Write every farmer-facing field in ${language}, in plain village words, short sentences.
+- No jargon unless you explain it in the same sentence.
+- Keep the scientific or English name in problem_local so an officer can read it.
+
+Reply with ONLY this JSON object and nothing else:
+
+{
+  "ok": true,
+  "is_plant": true,
+  "image_quality": "good" | "poor",
+  "retake_tip": "only when image_quality is poor",
+  "crop": "crop name in ${language}",
+  "problem": "what is wrong, in ${language}",
+  "problem_local": "scientific or English name",
+  "confidence": 0.0,
+  "severity": "low" | "moderate" | "high",
+  "spread_risk": "low" | "medium" | "high",
+  "what_i_see": "2-3 sentences describing the damage in ${language}",
+  "why_it_happens": "2-3 sentences on the cause in ${language}",
+  "steps": [
+    { "kind": "field" | "organic" | "chemical",
+      "title": "short imperative line in ${language}",
+      "detail": "1-3 sentences in ${language}",
+      "when": "today / this week / only if it spreads, in ${language}" }
+  ],
+  "prevention": ["3-4 short lines in ${language}"],
+  "see_expert_if": ["2-3 short lines in ${language}"],
+  "neighbour_alert": "one line in ${language}, or empty if the problem does not spread"
+}`;
+}
+
+/* ── api.js ─────────────────────────────── */
+/* ══ 1. Image preparation ═══════════════════════════════════════
+   Everything here runs on the phone. A 12 MP photo becomes roughly
+   150 KB before it touches the network, and three cheap checks catch
+   the photos that waste a call. */
+
+async function prepareImage(file) {
+  const bitmap = await loadBitmap(file);
+  const scale = Math.min(1, CONFIG.maxEdge / Math.max(bitmap.width, bitmap.height));
+  const w = Math.round(bitmap.width * scale);
+  const h = Math.round(bitmap.height * scale);
+
+  const canvas = document.createElement('canvas');
+  canvas.width = w; canvas.height = h;
+  canvas.getContext('2d').drawImage(bitmap, 0, 0, w, h);
+
+  const blob = await new Promise(r => canvas.toBlob(r, 'image/jpeg', CONFIG.jpegQuality));
+  const dataUrl = canvas.toDataURL('image/jpeg', CONFIG.jpegQuality);
+  const thumb = await makeThumb(bitmap);
+  bitmap.close?.();
+
+  return { blob, dataUrl, thumb, width: w, height: h, quality: inspect(canvas) };
+}
+
+function loadBitmap(file) {
+  if (window.createImageBitmap) return createImageBitmap(file);
+  return new Promise((res, rej) => {
+    const img = new Image();
+    img.onload = () => res(img);
+    img.onerror = () => rej(new Error('decode'));
+    img.src = URL.createObjectURL(file);
+  });
+}
+
+async function makeThumb(bitmap) {
+  const side = 180;
+  const c = document.createElement('canvas');
+  c.width = c.height = side;
+  const s = Math.max(side / bitmap.width, side / bitmap.height);
+  const dw = bitmap.width * s, dh = bitmap.height * s;
+  c.getContext('2d').drawImage(bitmap, (side - dw) / 2, (side - dh) / 2, dw, dh);
+  return c.toDataURL('image/jpeg', 0.7);
+}
+
+/* Brightness, sharpness and how much of the frame is leaf-coloured.
+   Crude on purpose: it only has to reject the obvious failures. */
+function inspect(canvas) {
+  const side = 200;
+  const c = document.createElement('canvas');
+  c.width = c.height = side;
+  c.getContext('2d').drawImage(canvas, 0, 0, side, side);
+  const px = c.getContext('2d').getImageData(0, 0, side, side).data;
+
+  const grey = new Float32Array(side * side);
+  let sum = 0, plantish = 0;
+  for (let i = 0, p = 0; i < px.length; i += 4, p++) {
+    const r = px[i], g = px[i + 1], b = px[i + 2];
+    const y = 0.299 * r + 0.587 * g + 0.114 * b;
+    grey[p] = y; sum += y;
+    if (g > r + 6 && g > b + 6) plantish++;
+    else if (r > 90 && g > 70 && b < 90 && Math.abs(r - g) < 70) plantish += 0.5; // dry or yellowed tissue
+  }
+
+  // Variance of a Laplacian — the standard cheap sharpness measure.
+  let m = 0, m2 = 0, n = 0;
+  for (let y = 1; y < side - 1; y++) {
+    for (let x = 1; x < side - 1; x++) {
+      const i = y * side + x;
+      const l = 4 * grey[i] - grey[i - 1] - grey[i + 1] - grey[i - side] - grey[i + side];
+      m += l; m2 += l * l; n++;
+    }
+  }
+  const sharpness = m2 / n - (m / n) ** 2;
+  const brightness = sum / (side * side);
+  const plantRatio = plantish / (side * side);
+
+  let flag = null;
+  if (brightness < 42) flag = 'dark';
+  else if (sharpness < 55) flag = 'blurry';
+  else if (plantRatio < 0.12) flag = 'notplant';
+
+  return { brightness, sharpness, plantRatio, flag };
+}
+
+/* ══ 2. Which route are we on? ══════════════════════════════════ */
+
+let routeCache;
+async function resolveRoute() {
+  if (routeCache) return routeCache;
+  routeCache = await (async () => {
+    if (window.claude?.use) {
+      const sample = await window.claude.use('sample').catch(() => null);
+      if (sample) {
+        const limits = await sample.limits?.().catch(() => null);
+        if (limits?.images) return { name: 'claude', sample };
+      }
+    }
+    if (CONFIG.apiBase !== '' || location.protocol.startsWith('http')) {
+      return { name: 'backend' };
+    }
+    if (CONFIG.anthropicKey) return { name: 'direct' };
+    return { name: 'samples' };
+  })();
+  return routeCache;
+}
+
+/* ══ 3. Diagnose ════════════════════════════════════════════════ */
+
+async function diagnose({ blob, language, crop, note, signal }) {
+  const route = await resolveRoute();
+  const prompt = buildPrompt({ language, crop, note });
+
+  if (route.name === 'claude') {
+    const data = await route.sample.json(prompt, {
+      images: [blob], modelTier: 'default', signal, cache: false
+    });
+    return { data, via: 'claude' };
+  }
+
+  if (route.name === 'backend') {
+    const fd = new FormData();
+    fd.append('photo', blob, 'leaf.jpg');
+    fd.append('language', language);
+    fd.append('crop', crop || 'not stated');
+    fd.append('note', note || '');
+    const res = await fetch(CONFIG.apiBase.replace(/\/$/, '') + '/api/diagnose', {
+      method: 'POST', body: fd, signal
+    });
+    if (res.status === 429) throw tagged('busy');
+    if (!res.ok) throw tagged('net');
+    return { data: await res.json(), via: 'backend' };
+  }
+
+  if (route.name === 'direct') {
+    const b64 = await blobToBase64(blob);
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST', signal,
+      headers: {
+        'content-type': 'application/json',
+        'x-api-key': CONFIG.anthropicKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: CONFIG.model, max_tokens: 2000,
+        messages: [{ role: 'user', content: [
+          { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: b64 } },
+          { type: 'text', text: prompt }
+        ] }]
+      })
+    });
+    if (res.status === 429) throw tagged('busy');
+    if (!res.ok) throw tagged('net');
+    const body = await res.json();
+    const text = body.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    return { data: parseLoose(text), via: 'direct' };
+  }
+
+  throw tagged('nobackend');
+}
+
+function tagged(code) { const e = new Error(code); e.code = code; return e; }
+
+function blobToBase64(blob) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = () => res(String(r.result).split(',')[1]);
+    r.onerror = () => rej(new Error('read'));
+    r.readAsDataURL(blob);
+  });
+}
+
+/* Models sometimes wrap JSON in a fence or a sentence. Read it kindly. */
+function parseLoose(text) {
+  try { return JSON.parse(text); } catch { /* keep going */ }
+  const fence = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+  if (fence) { try { return JSON.parse(fence[1]); } catch { /* keep going */ } }
+  const a = text.indexOf('{'), b = text.lastIndexOf('}');
+  if (a !== -1 && b > a) return JSON.parse(text.slice(a, b + 1));
+  throw tagged('parse');
+}
+
+/* ══ 4. Shape guard ═════════════════════════════════════════════
+   Never let a malformed reply reach the screen half-rendered. A
+   second dose-stripping pass runs here too: the backend does it
+   properly, but the direct route has no backend to do it. */
+
+const DOSE = /\b\d+(?:[.,]\d+)?\s*(?:ml|l|litres?|liters?|g|gm|grams?|kg|tsp|tbsp|teaspoons?|tablespoons?)\b/i;
+
+function normalise(raw, fallbackCrop) {
+  const d = raw && typeof raw === 'object' ? raw : {};
+  const num = (v, dflt) => (typeof v === 'number' && isFinite(v) ? v : dflt);
+  const oneOf = (v, allowed, dflt) => (allowed.includes(v) ? v : dflt);
+  const str = v => (typeof v === 'string' ? v.trim() : '');
+  const list = v => (Array.isArray(v) ? v.map(str).filter(Boolean).slice(0, 6) : []);
+
+  const steps = (Array.isArray(d.steps) ? d.steps : []).slice(0, 6).map(s => ({
+    kind: oneOf(s?.kind, ['field', 'organic', 'chemical'], 'field'),
+    title: str(s?.title),
+    detail: stripDose(str(s?.detail)),
+    when: str(s?.when)
+  })).filter(s => s.title);
+
+  // Chemicals last, whatever order the model used.
+  const rank = { field: 0, organic: 1, chemical: 2 };
+  steps.sort((a, b) => rank[a.kind] - rank[b.kind]);
+
+  return {
+    ok: d.ok !== false,
+    is_plant: d.is_plant !== false,
+    image_quality: oneOf(d.image_quality, ['good', 'poor'], 'good'),
+    retake_tip: str(d.retake_tip),
+    crop: str(d.crop) || fallbackCrop || '',
+    problem: str(d.problem) || '—',
+    problem_local: str(d.problem_local),
+    confidence: Math.max(0, Math.min(1, num(d.confidence, 0.5))),
+    severity: oneOf(d.severity, ['low', 'moderate', 'high'], 'moderate'),
+    spread_risk: oneOf(d.spread_risk, ['low', 'medium', 'high'], 'low'),
+    what_i_see: str(d.what_i_see),
+    why_it_happens: str(d.why_it_happens),
+    steps,
+    prevention: list(d.prevention),
+    see_expert_if: list(d.see_expert_if),
+    neighbour_alert: str(d.neighbour_alert)
+  };
+}
+
+/* A sentence with a dose in it exists to give a dose, so the whole
+   sentence goes. Deleting only the number leaves "Use , per pump",
+   which reads like a typo and invites a guess. */
+function stripDose(s) {
+  return s
+    .replace(/[®™]/g, '')
+    .split(/(?<=[.!?।])\s+/)
+    .filter(part => part.trim() && !DOSE.test(part))
+    .join(' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+/* ══ 5. Samples ═════════════════════════════════════════════════ */
+
+function sampleCase(id, lang) {
+  return { data: structuredClone(SAMPLES[id][lang] || SAMPLES[id].en), image: SAMPLE_IMAGES[id] };
+}
+
+/* ── app.js ─────────────────────────────── */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+const store = {
+  get(k, d) { try { return JSON.parse(localStorage.getItem('patta.' + k)) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('patta.' + k, JSON.stringify(v)); } catch { /* full */ } }
+};
+
+const state = {
+  lang: store.get('lang', (navigator.language || '').slice(0, 2)) || 'en',
+  theme: store.get('theme', 'auto'),
+  crop: '',
+  photo: null,       // { blob, dataUrl, thumb, quality }
+  result: null,
+  controller: null
+};
+if (!LANGS[state.lang]) state.lang = 'en';
+
+const t = k => (T[state.lang] || T.en)[k] ?? T.en[k] ?? k;
+
+/* ═════════ language ═════════ */
+
+function applyLang() {
+  document.documentElement.lang = state.lang;
+  $$('[data-t]').forEach(el => { el.textContent = t(el.dataset.t); });
+  $$('[data-t-ph]').forEach(el => { el.placeholder = t(el.dataset.tPh); });
+  $$('[data-t-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.tAria)); });
+  $$('.lang').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === state.lang)));
+  $('#aboutBody').innerHTML = ABOUT[state.lang] || ABOUT.en;
+  renderCrops();
+  updateGoBar();
+  if (state.result) renderResult(state.result);
+  renderHistory();
+}
+
+/* ═════════ views ═════════ */
+
+function go(view) {
+  $$('.view').forEach(v => v.classList.toggle('is-active', v.id === 'view-' + view));
+  $$('.tab').forEach(b => b.classList.toggle('is-active', b.dataset.go === view));
+  if (view === 'history') renderHistory();
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+/* ═════════ crop chips ═════════ */
+
+function renderCrops() {
+  $('#cropChips').innerHTML = CROPS.map(c =>
+    `<button type="button" class="chip" data-crop="${c.id}" aria-pressed="${state.crop === c.id}">${esc(c[state.lang] || c.en)}</button>`
+  ).join('');
+}
+
+function cropName() {
+  const c = CROPS.find(x => x.id === state.crop);
+  return c ? (c.en + (state.lang !== 'en' ? ` (${c[state.lang]})` : '')) : '';
+}
+
+/* ═════════ photo ═════════ */
+
+async function usePhoto(file) {
+  if (!file || !file.type.startsWith('image/')) return;
+  try {
+    const photo = await prepareImage(file);
+    state.photo = photo;
+    const vf = $('#viewfinder');
+    vf.classList.add('has-photo');
+    $('#preview').src = photo.dataUrl;
+    $('#preview').hidden = false;
+    $('#clearPhoto').hidden = false;
+
+    const flag = photo.quality.flag;
+    const msg = { dark: 'errDark', blurry: 'errBlurry', notplant: 'errNotPlant' }[flag];
+    const box = $('#photoFlag');
+    box.hidden = !msg;
+    if (msg) box.textContent = t(msg);
+
+    updateGoBar();
+  } catch {
+    toast(t('errGeneric'));
+  }
+}
+
+function clearPhoto() {
+  state.photo = null;
+  $('#viewfinder').classList.remove('has-photo');
+  $('#preview').hidden = true;
+  $('#preview').removeAttribute('src');
+  $('#clearPhoto').hidden = true;
+  $('#photoFlag').hidden = true;
+  stopCamera();
+  updateGoBar();
+}
+
+let videoStream = null;
+
+async function toggleCamera(e) {
+  if (e) e.preventDefault();
+  const video = $('#videoFeed');
+  if (videoStream) {
+    // Snap photo
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth || 640;
+    canvas.height = video.videoHeight || 480;
+    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+    canvas.toBlob(blob => {
+      if (blob) usePhoto(new File([blob], "snapshot.jpg", { type: "image/jpeg" }));
+    }, 'image/jpeg', CONFIG.jpegQuality);
+    stopCamera();
+  } else {
+    // Start camera
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      try {
+        videoStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+        video.srcObject = videoStream;
+        video.hidden = false;
+        $('#takePhotoLabel').textContent = 'Snap';
+      } catch (err) {
+        $('#camInput').click();
+      }
+    } else {
+      $('#camInput').click();
+    }
+  }
+}
+
+function stopCamera() {
+  if (videoStream) {
+    videoStream.getTracks().forEach(t => t.stop());
+    videoStream = null;
+  }
+  const video = $('#videoFeed');
+  if (video) video.hidden = true;
+  const label = $('#takePhotoLabel');
+  if (label) label.textContent = t('takePhoto');
+}
+
+function updateGoBar() {
+  const ready = !!state.photo;
+  $('#diagnoseBtn').disabled = !ready;
+  $('#goNote').textContent = ready ? t('readyNote') : t('needPhoto');
+}
+
+/* ═════════ diagnose ═════════ */
+
+const BUSY_STEPS = ['busy1', 'busy2', 'busy3'];
+
+async function runDiagnosis() {
+  if (!state.photo) return;
+  stopSpeaking();
+
+  $('#busyImg').src = state.photo.dataUrl;
+  go('busy');
+
+  let i = 0;
+  $('#busyStep').textContent = t(BUSY_STEPS[0]);
+  const ticker = setInterval(() => {
+    i = Math.min(i + 1, BUSY_STEPS.length - 1);
+    $('#busyStep').textContent = t(BUSY_STEPS[i]);
+  }, 6000);
+
+  state.controller = new AbortController();
+
+  try {
+    const { data } = await diagnose({
+      blob: state.photo.blob,
+      language: LANGS[state.lang].model,
+      crop: cropName(),
+      note: $('#note').value.trim(),
+      signal: state.controller.signal
+    });
+    const result = normalise(data, cropName());
+    finish(result, state.photo.dataUrl, state.photo.thumb);
+  } catch (err) {
+    if (err?.name === 'AbortError' || err?.code === 'cancelled') {
+      go('scan'); toast(t('cancelled')); return;
+    }
+    // Never leave the farmer on an error screen with nothing to look at.
+    const fallbackId = state.crop === 'rice' ? 'rice_blast' : 'tomato_early_blight';
+    const { data } = sampleCase(fallbackId, state.lang);
+    finish(normalise(data), state.photo.dataUrl, state.photo.thumb);
+    toast(t(errorKey(err)));
+  } finally {
+    clearInterval(ticker);
+    state.controller = null;
+  }
+}
+
+function errorKey(err) {
+  switch (err?.code) {
+    case 'busy': return 'errBusy';
+    case 'net': return 'errNet';
+    case 'nobackend': return 'offlineSample';
+    default: return navigator.onLine ? 'errGeneric' : 'errNet';
+  }
+}
+
+function showSample(id) {
+  stopSpeaking();
+  const { data, image } = sampleCase(id, state.lang);
+  finish(normalise(data), image, image);
+}
+
+function finish(result, imageUrl, thumb) {
+  result.image = imageUrl;
+  result.ts = Date.now();
+  result.lang = state.lang;
+  state.result = result;
+  saveScan({ id: String(result.ts), ts: result.ts, lang: state.lang, thumb, data: result });
+  renderResult(result);
+  go('result');
+}
+
+/* ═════════ result rendering ═════════ */
+
+function renderResult(r) {
+  const low = r.confidence < CONFIG.confidenceFloor;
+  const sev = { low: t('low'), moderate: t('moderate'), high: t('high') }[r.severity];
+  const spread = { low: t('low'), medium: t('medium'), high: t('high') }[r.spread_risk];
+  const sevPct = { low: 33, moderate: 66, high: 100 }[r.severity];
+
+  const kindLabel = { field: t('kindField'), organic: t('kindOrganic'), chemical: t('kindChemical') };
+  const hasChemical = r.steps.some(s => s.kind === 'chemical');
+
+  $('#result').innerHTML = `
+  <div class="verdict sev-${esc(r.severity)}">
+    ${r.image ? `<img class="verdict__photo" src="${esc(r.image)}" alt="">` : ''}
+    <div class="verdict__body">
+      ${r.crop ? `<p class="verdict__crop">${esc(r.crop)}</p>` : ''}
+      <h2 class="verdict__name" id="resTitle">${esc(r.problem)}</h2>
+      ${r.problem_local && r.problem_local !== r.problem
+        ? `<p class="verdict__alt" lang="en">${esc(r.problem_local)}</p>` : ''}
+
+      <div class="meter sev-${esc(r.severity)}">
+        <div class="meter__top"><span>${esc(t('severity'))}</span><b>${esc(sev)}</b></div>
+        <div class="meter__track"><div class="meter__fill" style="width:${sevPct}%"></div></div>
+      </div>
+
+      <div class="meter meter--conf">
+        <div class="meter__top"><span>${esc(t('confidence'))}</span><b>${Math.round(r.confidence * 100)}%</b></div>
+        <div class="meter__track"><div class="meter__fill" style="width:${Math.round(r.confidence * 100)}%"></div></div>
+      </div>
+
+      ${r.spread_risk !== 'low' ? `<p class="hint">${esc(t('spread'))}: <b>${esc(spread)}</b></p>` : ''}
+
+      ${low ? `<p class="caution"><svg class="ic"><use href="#i-warn"/></svg><span>${esc(t('lowConf'))}</span></p>` : ''}
+    </div>
+
+    <div class="actions">
+      <button type="button" class="btn" id="speakBtn">
+        <svg class="ic"><use href="#i-speaker"/></svg><span>${esc(t('listen'))}</span>
+      </button>
+      <button type="button" class="btn btn--quiet" id="shareBtn">
+        <svg class="ic"><use href="#i-share"/></svg><span>${esc(t('share'))}</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="plan">
+    ${r.what_i_see ? `<div class="block"><h3>${esc(t('whatISee'))}</h3><p>${esc(r.what_i_see)}</p>
+      ${r.why_it_happens ? `<h3>${esc(t('whyHappens'))}</h3><p>${esc(r.why_it_happens)}</p>` : ''}</div>` : ''}
+
+    <div class="block">
+      <h3>${esc(t('planTitle'))}</h3>
+      <ol class="steps">
+        ${r.steps.map(s => `
+          <li class="kind-${esc(s.kind)}">
+            <div class="step__head">
+              <span class="step__title">${esc(s.title)}</span>
+              <span class="step__kind">${esc(kindLabel[s.kind])}</span>
+            </div>
+            ${s.detail ? `<p class="step__detail">${esc(s.detail)}</p>` : ''}
+            ${s.when ? `<p class="step__when">${esc(s.when)}</p>` : ''}
+          </li>`).join('')}
+      </ol>
+      ${hasChemical ? `<p class="hint">${esc(t('noDose'))}</p>` : ''}
+    </div>
+
+    ${r.prevention.length ? `<div class="block"><h3>${esc(t('prevention'))}</h3>
+      <ul class="ticks">${r.prevention.map(p =>
+        `<li><svg class="ic"><use href="#i-check"/></svg><span>${esc(p)}</span></li>`).join('')}</ul></div>` : ''}
+
+    ${r.see_expert_if.length ? `<div class="block"><h3>${esc(t('expertIf'))}</h3>
+      <ul class="ticks ticks--warn">${r.see_expert_if.map(p =>
+        `<li><svg class="ic"><use href="#i-warn"/></svg><span>${esc(p)}</span></li>`).join('')}</ul></div>` : ''}
+
+    ${r.neighbour_alert ? `<div class="block"><h3>${esc(t('neighbours'))}</h3><p>${esc(r.neighbour_alert)}</p></div>` : ''}
+
+    <div class="helprow">
+      <a class="btn btn--quiet" href="tel:${esc(CONFIG.kisanCallCentre.replace(/-/g, ''))}">
+        <svg class="ic"><use href="#i-phone"/></svg><span>${esc(t('callKCC'))}</span>
+      </a>
+      <button type="button" class="btn" id="againBtn">
+        <svg class="ic"><use href="#i-camera"/></svg><span>${esc(t('again'))}</span>
+      </button>
+    </div>
+
+    <div class="feedback" id="feedback">
+      <span>${esc(t('helpful'))}</span>
+      <button type="button" class="chip" data-vote="up">${esc(t('yes'))}</button>
+      <button type="button" class="chip" data-vote="down">${esc(t('no'))}</button>
+    </div>
+  </div>`;
+}
+
+/* ═════════ read aloud ═════════ */
+
+let speaking = false;
+
+function speechText(r) {
+  const parts = [r.problem];
+  if (r.what_i_see) parts.push(r.what_i_see);
+  parts.push(t('planTitle') + '.');
+  r.steps.forEach((s, i) => parts.push(`${i + 1}. ${s.title}. ${s.detail}`));
+  if (r.confidence < CONFIG.confidenceFloor) parts.push(t('lowConf'));
+  return parts.join(' ');
+}
+
+function pickVoice() {
+  const want = LANGS[state.lang].voice;
+  const voices = speechSynthesis.getVoices();
+  for (const tag of want) {
+    const v = voices.find(v => v.lang?.toLowerCase().startsWith(tag.toLowerCase()));
+    if (v) return v;
+  }
+  return null;
+}
+
+function toggleSpeak() {
+  if (speaking) { stopSpeaking(); return; }
+  if (!('speechSynthesis' in window)) { toast(t('noVoice')); return; }
+
+  const voice = pickVoice();
+  if (!voice && state.lang !== 'en') toast(t('noVoice'));
+
+  const u = new SpeechSynthesisUtterance(speechText(state.result));
+  u.lang = LANGS[state.lang].bcp;
+  if (voice) u.voice = voice;
+  u.rate = 0.92;
+  u.onend = u.onerror = () => { speaking = false; labelSpeak(); };
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+  speaking = true;
+  labelSpeak();
+}
+
+function stopSpeaking() {
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  speaking = false; labelSpeak();
+}
+
+function labelSpeak() {
+  const b = $('#speakBtn');
+  if (b) b.querySelector('span').textContent = speaking ? t('stopListen') : t('listen');
+}
+
+/* ═════════ voice note ═════════ */
+
+let recogniser = null;
+
+function toggleMic() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) { $('#micHint').hidden = false; $('#micHint').textContent = t('micUnsupported'); return; }
+
+  if (recogniser) { recogniser.stop(); return; }
+
+  recogniser = new SR();
+  recogniser.lang = LANGS[state.lang].bcp;
+  recogniser.interimResults = true;
+  recogniser.continuous = false;
+
+  const hint = $('#micHint');
+  hint.hidden = false; hint.textContent = t('listening');
+  $('#micBtn').classList.add('is-live');
+
+  const before = $('#note').value.trim();
+  recogniser.onresult = e => {
+    const said = [...e.results].map(r => r[0].transcript).join(' ');
+    $('#note').value = (before ? before + ' ' : '') + said;
+  };
+  recogniser.onerror = () => { hint.textContent = t('micUnsupported'); };
+  recogniser.onend = () => {
+    recogniser = null;
+    $('#micBtn').classList.remove('is-live');
+    hint.hidden = true;
+  };
+  recogniser.start();
+}
+
+/* ═════════ share ═════════ */
+
+function shareText(r) {
+  const lines = [
+    `${r.problem}${r.crop ? ' — ' + r.crop : ''}`,
+    `${t('confidence')}: ${Math.round(r.confidence * 100)}%`,
+    '',
+    t('planTitle') + ':',
+    ...r.steps.map((s, i) => `${i + 1}. ${s.title} — ${s.detail}`)
+  ];
+  if (r.see_expert_if.length) lines.push('', t('expertIf') + ': ' + r.see_expert_if.join('; '));
+  lines.push('', 'Patta — ' + t('tagline'));
+  return lines.join('\n');
+}
+
+async function share() {
+  const text = shareText(state.result);
+  if (navigator.share) {
+    try { await navigator.share({ title: state.result.problem, text }); return; } catch { /* cancelled */ }
+  }
+  try { await navigator.clipboard.writeText(text); toast(t('copied')); }
+  catch { toast(t('errGeneric')); }
+}
+
+/* ═════════ history ═════════ */
+
+function saveScan(entry) {
+  const all = store.get('history', []);
+  all.unshift(entry);
+  store.set('history', all.slice(0, CONFIG.historyLimit));
+}
+
+function renderHistory() {
+  const all = store.get('history', []);
+  const box = $('#historyList');
+  if (!all.length) { box.innerHTML = `<p class="empty">${esc(t('emptyHistory'))}</p>`; return; }
+
+  box.innerHTML = all.map(s => `
+    <div class="hist">
+      <img src="${esc(s.thumb || s.data.image || '')}" alt="">
+      <button type="button" class="linkbtn" data-open="${esc(s.id)}" style="text-align:left">
+        <b><span class="dot sev-${esc(s.data.severity)}"></span>${esc(s.data.problem)}</b>
+        <small>${esc(s.data.crop || '')} · ${new Date(s.ts).toLocaleDateString(LANGS[s.lang]?.bcp || 'en-IN')}</small>
+      </button>
+      <button type="button" class="iconbtn" data-del="${esc(s.id)}" aria-label="${esc(t('delete'))}">
+        <svg class="ic"><use href="#i-trash"/></svg>
+      </button>
+    </div>`).join('');
+}
+
+/* ═════════ theme + toast ═════════ */
+
+function applyTheme() {
+  document.documentElement.dataset.theme = state.theme;
+}
+
+let toastTimer;
+function toast(msg) {
+  const el = $('#toast');
+  el.textContent = msg; el.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.hidden = true; }, 4200);
+}
+
+/* ═════════ wiring ═════════ */
+
+function bind() {
+  $$('.lang').forEach(b => b.addEventListener('click', () => {
+    state.lang = b.dataset.lang; store.set('lang', state.lang); stopSpeaking(); applyLang();
+  }));
+
+  $$('[data-go]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); go(b.dataset.go); }));
+
+  $('#themeBtn').addEventListener('click', () => {
+    const now = document.documentElement.dataset.theme;
+    const isDark = now === 'dark' ||
+      (now === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+    state.theme = isDark ? 'light' : 'dark';
+    store.set('theme', state.theme); applyTheme();
+  });
+
+  $('#camBtn').addEventListener('click', toggleCamera);
+  $('#camInput').addEventListener('change', e => { stopCamera(); usePhoto(e.target.files[0]); });
+  $('#fileInput').addEventListener('change', e => { stopCamera(); usePhoto(e.target.files[0]); });
+  $('#clearPhoto').addEventListener('click', clearPhoto);
+
+  const vf = $('#viewfinder');
+  ['dragenter', 'dragover'].forEach(ev => vf.addEventListener(ev, e => { e.preventDefault(); }));
+  vf.addEventListener('drop', e => { e.preventDefault(); usePhoto(e.dataTransfer.files[0]); });
+  window.addEventListener('paste', e => {
+    const f = [...(e.clipboardData?.files || [])][0];
+    if (f) usePhoto(f);
+  });
+
+  $('#cropChips').addEventListener('click', e => {
+    const b = e.target.closest('[data-crop]'); if (!b) return;
+    state.crop = state.crop === b.dataset.crop ? '' : b.dataset.crop;
+    renderCrops();
+  });
+
+  $('#micBtn').addEventListener('click', toggleMic);
+  $('#diagnoseBtn').addEventListener('click', runDiagnosis);
+  $('#cancelBtn').addEventListener('click', () => state.controller?.abort());
+
+  $$('[data-sample]').forEach(b => b.addEventListener('click', () => showSample(b.dataset.sample)));
+
+  $('#result').addEventListener('click', e => {
+    if (e.target.closest('#speakBtn')) return toggleSpeak();
+    if (e.target.closest('#shareBtn')) return share();
+    if (e.target.closest('#againBtn')) { stopSpeaking(); clearPhoto(); return go('scan'); }
+    const vote = e.target.closest('[data-vote]');
+    if (vote) { $('#feedback').innerHTML = `<span>${esc(t('thanks'))}</span>`; }
+  });
+
+  $('#historyList').addEventListener('click', e => {
+    const open = e.target.closest('[data-open]');
+    if (open) {
+      const s = store.get('history', []).find(x => x.id === open.dataset.open);
+      if (s) { state.result = s.data; renderResult(s.data); go('result'); }
+      return;
+    }
+    const del = e.target.closest('[data-del]');
+    if (del) {
+      store.set('history', store.get('history', []).filter(x => x.id !== del.dataset.del));
+      renderHistory(); toast(t('deleted'));
+    }
+  });
+
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stopSpeaking(); });
+  if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+}
+
+/* ═════════ start ═════════ */
+
+async function init() {
+  applyTheme();
+  bind();
+  applyLang();
+  go('scan');
+
+  if (!window.__PATTA_SINGLE_FILE__ && 'serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  }
+
+  const route = await resolveRoute();
+  if (route.name === 'samples') {
+    // Say it once, quietly, so a judge knows what they are looking at.
+    console.info('[Patta] No model configured — sample cases will answer. See frontend/js/config.js');
+  }
+}
+
+init();
+
+</script>
+</body>
+</html>
