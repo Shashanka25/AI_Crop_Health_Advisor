@@ -146,4 +146,3 @@ Patta has **not** been validated against an agronomist-labelled photo set. Until
 | Proper use of technology | Structured JSON contract, server-side safety filter, PWA |
 | Real-world impact | Pilot metrics above |
 
-Kisan Call Centre: **1800-180-1551**, free, 6am to 10pm.
