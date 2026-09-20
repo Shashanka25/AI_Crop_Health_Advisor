@@ -52,7 +52,7 @@ Whichever route you pick, the app falls back to the sample cases if the network 
 
 ---
 
-## How it is put together
+## How it is put together:
 
 ```
 Phone (PWA)
