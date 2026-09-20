@@ -1,6 +1,6 @@
 # Patta — AI crop-health advisor
 
-**Theme:** Tech for a Better Tomorrow
+**Theme:** Tech for a Better Tomorrow.
 **In one line:** photograph a sick leaf, get a treatment plan in Telugu, Hindi or English, read aloud.
 
 Smallholder farmers notice a crop disease late and reach an expert later still. One agriculture officer covers many villages, so a leaf spot can cross a field before anyone trained has looked at it — and a spray often gets bought before the problem is confirmed, which wastes money and can damage the crop.
