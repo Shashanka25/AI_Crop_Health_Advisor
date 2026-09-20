@@ -28,11 +28,11 @@ It is different from a plant-ID app in one way that matters: **it tells you when
 
 ## Run it
 
-### Option A — just look at it (30 seconds)
+### Option A — just look at it (30 seconds):
 
 Open `dist/patta.html` in any browser. One file, no server, no key. The two built-in sample cases answer, so the whole flow — language switch, viewfinder, severity and confidence meters, read-aloud, history — works immediately.
 
-### Option B — real diagnosis, the right way (recommended)
+### Option B — real diagnosis, the right way (recommended):
 
 ```bash
 pip install -r backend/requirements.txt
@@ -42,7 +42,7 @@ uvicorn backend.main:app --reload --port 8000
 
 Open <http://127.0.0.1:8000>. The backend serves the frontend, so there is no CORS to fight, and the key never leaves the server. Then set `apiBase` in `frontend/js/config.js` to `''` (same origin — already the default).
 
-### Option C — frontend only, for a classroom demo
+### Option C — frontend only, for a classroom demo:
 
 Serve `frontend/` with VS Code Live Server, put your key in `frontend/js/config.js`, and the page calls the model directly.
 
