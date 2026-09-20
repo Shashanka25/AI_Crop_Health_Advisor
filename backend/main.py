@@ -206,4 +206,5 @@ async def api_diagnose(
 
 
 # Serve the app itself last, so /api/* keeps priority.
-app.mount("/", StaticFiles(directory=ROOT / "frontend", html=True), name="frontend")
+if (ROOT / "frontend").is_dir():
+    app.mount("/", StaticFiles(directory=ROOT / "frontend", html=True), name="frontend")
