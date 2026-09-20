@@ -93,7 +93,7 @@ Vanilla HTML, CSS and JavaScript. No framework, no build step, no `node_modules`
 
 ---
 
-## Design decisions worth defending
+## Design decisions worth defending:
 
 **Type comes from the phone.** Android already ships Noto Sans Telugu and Devanagari. Downloading a webfont over 2G to say the same thing would be a worse app, so the stylesheet asks for the system family and gives Indic scripts more line-height instead.
 
